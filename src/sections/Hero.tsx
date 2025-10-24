@@ -1,28 +1,30 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowDownRight,
   Download,
   Sparkles,
-  Sparkles as SparklesIcon
-} from 'lucide-react'
-import { Typewriter } from '../components/Typewriter'
-import { heroMetrics, heroStack, resumeUrl } from '../utils/content'
-import { fadeIn, scaleIn, staggerContainer } from '../utils/motion'
-import profileImage from '../assets/yan-chapetta.jpeg'
+  Sparkles as SparklesIcon,
+} from "lucide-react";
+import { Typewriter } from "../components/Typewriter";
+import { heroMetrics, heroStack, resumeUrl } from "../utils/content";
+import { fadeIn, scaleIn, staggerContainer } from "../utils/motion";
+import profileImage from "../assets/yan-chapetta.jpeg";
 
 export function Hero() {
-  const sectionRef = useRef<HTMLElement | null>(null)
+  const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start start', 'end start']
-  })
+    offset: ["start start", "end start"],
+  });
   // Parallax effect keeps the background subtly moving on scroll without impacting content readability.
-  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, -140])
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, -140]);
 
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+    document
+      .getElementById("projects")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <section
@@ -41,7 +43,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.4 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
           className="hero-grid h-full w-full"
         />
       </motion.div>
@@ -55,7 +57,7 @@ export function Hero() {
       >
         <div className="col-span-12 space-y-8 lg:col-span-7">
           <motion.span
-            variants={fadeIn('down', 0)}
+            variants={fadeIn("down", 0)}
             className="inline-flex items-center gap-2 rounded-full border border-surface-light-muted/60 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-600 transition-colors dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
           >
             <Sparkles size={16} className="text-accent" />
@@ -64,29 +66,29 @@ export function Hero() {
 
           <div className="space-y-6">
             <motion.h1
-              variants={fadeIn('up', 0.05)}
+              variants={fadeIn("up", 0.05)}
               className="font-display text-[clamp(2.75rem,5vw,4rem)] font-semibold leading-[1.12] text-surface-light-foreground transition-colors dark:text-white"
             >
-              Olá, eu sou <span className="text-accent">Yan Chapetta 👋</span>
+              <span className="text-accent">Yan Chapetta</span>
             </motion.h1>
 
             <motion.p
-              variants={fadeIn('up', 0.09)}
+              variants={fadeIn("up", 0.09)}
               className="text-lg font-semibold uppercase tracking-[0.3em] text-slate-600 transition-colors dark:text-slate-300"
             >
               Desenvolvedor Front-End
             </motion.p>
 
             <motion.div
-              variants={fadeIn('up', 0.12)}
+              variants={fadeIn("up", 0.12)}
               className="flex flex-wrap items-center gap-3 text-base text-slate-600 transition-colors dark:text-slate-200 sm:text-lg"
             >
               <Typewriter
                 phrases={[
-                  'React + TypeScript + Tailwind CSS',
-                  'Node.js + Prisma no back-end',
-                  'Projetos pessoais focados em performance',
-                  'Disponível para remoto e presencial'
+                  "React + TypeScript + Tailwind CSS",
+                  "Node.js + Prisma no back-end",
+                  "Projetos pessoais focados em performance",
+                  "Disponível para remoto e presencial",
                 ]}
                 className="font-medium text-white"
                 typingSpeed={70}
@@ -94,17 +96,21 @@ export function Hero() {
             </motion.div>
 
             <motion.p
-              variants={fadeIn('up', 0.18)}
+              variants={fadeIn("up", 0.18)}
               className="max-w-2xl text-base leading-relaxed text-slate-600 transition-colors dark:text-slate-300 sm:text-lg"
             >
-              Estudante de Desenvolvimento Web Full Stack (Dev em Dobro) com formações pela Trybe e
-              DevQuest, unindo base de Marketing à criação de interfaces Vite + React. Minha rotina
-              diária combina sprints enxutas, documentação clara e entrega de aplicações performáticas.
+              Desenvolvedor Front-End em formação, aplicando projetos reais para
+              aprimorar minha base técnica e criar interfaces performáticas.
+              Estudo diariamente para aprofundar meus conhecimentos em React e
+              Node, buscando unir prática e teoria em aplicações modernas. Com a
+              chegada da nova era da IA, estou direcionando meus estudos para
+              integrar inteligência artificial ao desenvolvimento web e me
+              alinhar às demandas do mercado.
             </motion.p>
           </div>
 
           <motion.div
-            variants={fadeIn('up', 0.25)}
+            variants={fadeIn("up", 0.25)}
             className="flex w-full flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-start"
           >
             <button
@@ -127,7 +133,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            variants={fadeIn('up', 0.32)}
+            variants={fadeIn("up", 0.32)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.3 }}
@@ -138,11 +144,11 @@ export function Hero() {
                 key={metric.label}
                 className="rounded-2xl border border-surface-light-muted/60 bg-white/60 p-5 backdrop-blur-lg transition-colors dark:border-white/10 dark:bg-white/5"
               >
-                <p className="text-3xl font-semibold text-slate-900 transition-colors dark:text-white">
-                  {metric.value}
-                </p>
-                <p className="mt-1 text-sm font-medium uppercase tracking-[0.35em] text-slate-500 transition-colors dark:text-slate-400">
+                <p className="text-sm font-medium text-slate-500 transition-colors dark:text-slate-400">
                   {metric.label}
+                </p>
+                <p className="mt-1 text-3xl font-semibold text-slate-900 transition-colors dark:text-white">
+                  {metric.value}
                 </p>
                 <p className="mt-1 text-sm text-slate-600 transition-colors dark:text-slate-300">
                   {metric.caption}
@@ -153,7 +159,7 @@ export function Hero() {
         </div>
 
         <motion.div
-          variants={fadeIn('left', 0.2)}
+          variants={fadeIn("left", 0.2)}
           className="relative col-span-12 flex items-center justify-center lg:col-span-5"
         >
           <motion.div
@@ -182,7 +188,7 @@ export function Hero() {
               Aplicações front-end modernas para projetos reais
             </p>
             <motion.div
-              variants={fadeIn('up', 0.2)}
+              variants={fadeIn("up", 0.2)}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true, amount: 0.3 }}
@@ -191,11 +197,15 @@ export function Hero() {
               {heroStack.map((stack, index) => (
                 <motion.div
                   key={stack.name}
-                  variants={fadeIn('up', index * 0.06)}
+                  variants={fadeIn("up", index * 0.06)}
                   className="flex flex-col items-center gap-2 rounded-2xl border border-surface-light-muted/70 bg-white/80 px-4 py-3 transition-colors dark:border-white/10 dark:bg-white/5"
                 >
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/40 transition-colors dark:bg-slate-950/60">
-                    <img src={stack.iconUrl} alt={stack.name} className="h-7 w-7" />
+                    <img
+                      src={stack.iconUrl}
+                      alt={stack.name}
+                      className="h-7 w-7"
+                    />
                   </span>
                   <span className="text-xs uppercase tracking-widest text-slate-600 transition-colors dark:text-slate-400">
                     {stack.name}
@@ -207,5 +217,5 @@ export function Hero() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

@@ -29,6 +29,17 @@ export const heroMetrics: Metric[] = [
     value: "Rio de Janeiro",
     caption: "Disponível para remoto e presencial",
   },
+  {
+    label: "Idioma",
+    value: "Inglês",
+    caption:
+      "Boa leitura e compreensão auditiva, em desenvolvimento escrita e conversação.",
+  },
+  {
+    label: "Disponibilidade",
+    value: "Imediata",
+    caption: "Disponível para vagas de Front-End e Full Stack.",
+  },
 ];
 
 export const heroStack: StackItem[] = [
