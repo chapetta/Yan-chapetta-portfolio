@@ -6,18 +6,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#050505',
-        foreground: '#f5f5f5',
+        surface: {
+          DEFAULT: '#0b1120',
+          foreground: '#f8fafc',
+          muted: '#131c31',
+          inverted: '#f8fafc'
+        },
+        'surface-light': {
+          DEFAULT: '#f8fafc',
+          foreground: '#0f172a',
+          muted: '#e2e8f0'
+        },
         primary: {
-          DEFAULT: '#5C6CFF',
-          foreground: '#0f172a'
+          DEFAULT: '#6366f1',
+          foreground: '#0b1120'
         },
         accent: {
-          DEFAULT: '#14b8a6',
-          foreground: '#022c22'
+          DEFAULT: '#22d3ee',
+          foreground: '#082f49'
         },
-        muted: '#0f172a',
-        subtle: '#1e293b'
+        success: '#34d399',
+        warning: '#fbbf24',
+        danger: '#ef4444'
       },
       fontFamily: {
         sans: ['"Outfit"', 'system-ui', 'sans-serif'],

@@ -51,12 +51,12 @@ export function Hero() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.5 }}
-        className="mx-auto flex w-full max-w-6xl flex-col gap-16 lg:flex-row"
+        className="mx-auto grid w-full max-w-6xl grid-cols-12 gap-10 lg:gap-16"
       >
-        <div className="flex-1 space-y-8">
+        <div className="col-span-12 space-y-8 lg:col-span-7">
           <motion.span
             variants={fadeIn('down', 0)}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-300"
+            className="inline-flex items-center gap-2 rounded-full border border-surface-light-muted/60 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-600 transition-colors dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
           >
             <Sparkles size={16} className="text-accent" />
             front-end focado em produto
@@ -65,21 +65,21 @@ export function Hero() {
           <div className="space-y-6">
             <motion.h1
               variants={fadeIn('up', 0.05)}
-              className="font-display text-4xl leading-tight text-white sm:text-5xl lg:text-[3.75rem] lg:leading-[1.1]"
+              className="font-display text-[clamp(2.75rem,5vw,4rem)] font-semibold leading-[1.12] text-surface-light-foreground transition-colors dark:text-white"
             >
               Olá, eu sou <span className="text-accent">Yan Chapetta 👋</span>
             </motion.h1>
 
             <motion.p
               variants={fadeIn('up', 0.09)}
-              className="text-lg font-semibold uppercase tracking-[0.3em] text-slate-300"
+              className="text-lg font-semibold uppercase tracking-[0.3em] text-slate-600 transition-colors dark:text-slate-300"
             >
               Desenvolvedor Front-End
             </motion.p>
 
             <motion.div
               variants={fadeIn('up', 0.12)}
-              className="flex flex-wrap items-center gap-3 text-base text-slate-200 sm:text-lg"
+              className="flex flex-wrap items-center gap-3 text-base text-slate-600 transition-colors dark:text-slate-200 sm:text-lg"
             >
               <Typewriter
                 phrases={[
@@ -95,7 +95,7 @@ export function Hero() {
 
             <motion.p
               variants={fadeIn('up', 0.18)}
-              className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg"
+              className="max-w-2xl text-base leading-relaxed text-slate-600 transition-colors dark:text-slate-300 sm:text-lg"
             >
               Estudante de Desenvolvimento Web Full Stack (Dev em Dobro) com formações pela Trybe e
               DevQuest, unindo base de Marketing à criação de interfaces Vite + React. Minha rotina
@@ -118,7 +118,7 @@ export function Hero() {
             <a
               href={resumeUrl}
               download
-              className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition-colors duration-300 hover:border-accent/60 hover:bg-accent/20 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-surface-light-muted/70 bg-white/80 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-slate-700 transition-colors duration-300 hover:border-accent/60 hover:bg-accent/20 hover:text-surface-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-white/10 dark:bg-white/5 dark:text-white sm:w-auto"
               aria-label="Baixar currículo em PDF"
             >
               <Download size={18} aria-hidden />
@@ -136,13 +136,17 @@ export function Hero() {
             {heroMetrics.map((metric) => (
               <div
                 key={metric.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-lg"
+                className="rounded-2xl border border-surface-light-muted/60 bg-white/60 p-5 backdrop-blur-lg transition-colors dark:border-white/10 dark:bg-white/5"
               >
-                <p className="text-3xl font-semibold text-white">{metric.value}</p>
-                <p className="mt-1 text-sm font-medium uppercase tracking-[0.35em] text-slate-400">
+                <p className="text-3xl font-semibold text-slate-900 transition-colors dark:text-white">
+                  {metric.value}
+                </p>
+                <p className="mt-1 text-sm font-medium uppercase tracking-[0.35em] text-slate-500 transition-colors dark:text-slate-400">
                   {metric.label}
                 </p>
-                <p className="mt-1 text-sm text-slate-300">{metric.caption}</p>
+                <p className="mt-1 text-sm text-slate-600 transition-colors dark:text-slate-300">
+                  {metric.caption}
+                </p>
               </div>
             ))}
           </motion.div>
@@ -150,7 +154,7 @@ export function Hero() {
 
         <motion.div
           variants={fadeIn('left', 0.2)}
-          className="relative flex flex-1 items-center justify-center"
+          className="relative col-span-12 flex items-center justify-center lg:col-span-5"
         >
           <motion.div
             variants={scaleIn}
@@ -171,8 +175,10 @@ export function Hero() {
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-sm uppercase tracking-[0.4em] text-slate-400">Principais stacks</p>
-            <p className="mt-3 text-2xl font-semibold text-white">
+            <p className="mt-6 text-sm uppercase tracking-[0.4em] text-slate-500 transition-colors dark:text-slate-400">
+              Principais stacks
+            </p>
+            <p className="mt-3 text-2xl font-semibold text-slate-900 transition-colors dark:text-white">
               Aplicações front-end modernas para projetos reais
             </p>
             <motion.div
@@ -186,12 +192,14 @@ export function Hero() {
                 <motion.div
                   key={stack.name}
                   variants={fadeIn('up', index * 0.06)}
-                  className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                  className="flex flex-col items-center gap-2 rounded-2xl border border-surface-light-muted/70 bg-white/80 px-4 py-3 transition-colors dark:border-white/10 dark:bg-white/5"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-950/60">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/40 transition-colors dark:bg-slate-950/60">
                     <img src={stack.iconUrl} alt={stack.name} className="h-7 w-7" />
                   </span>
-                  <span className="text-xs uppercase tracking-widest text-slate-400">{stack.name}</span>
+                  <span className="text-xs uppercase tracking-widest text-slate-600 transition-colors dark:text-slate-400">
+                    {stack.name}
+                  </span>
                 </motion.div>
               ))}
             </motion.div>

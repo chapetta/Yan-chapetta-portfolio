@@ -10,7 +10,7 @@ import { FloatingWhatsapp } from './components/FloatingWhatsapp'
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
+    <div className="relative min-h-screen overflow-x-hidden bg-surface-light font-sans text-surface-light-foreground transition-colors duration-300 dark:bg-surface dark:text-surface-foreground">
       <ScrollProgress />
       <FloatingNav />
       <FloatingWhatsapp />
@@ -22,8 +22,8 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
-      <footer className="px-6 pb-10 text-sm text-slate-500 sm:px-10 lg:px-16">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row sm:items-center">
+      <footer className="px-6 pb-10 text-sm text-slate-600 transition-colors duration-300 sm:px-10 lg:px-16 dark:text-slate-400">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 border-t border-surface-light-muted pt-6 transition-colors dark:border-white/5 sm:flex-row sm:items-center">
           <p>
             © {new Date().getFullYear()} Yan Chapetta. Projetado e desenvolvido com React, Tailwind CSS e Framer Motion.
           </p>

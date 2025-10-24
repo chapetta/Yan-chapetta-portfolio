@@ -25,7 +25,7 @@ export function Testimonials() {
             <motion.blockquote
               key={`${testimonial.name}-${index}`}
               variants={fadeIn('up', index * 0.1)}
-              className="relative flex h-full flex-col gap-4 rounded-3xl border border-white/10 bg-slate-900/50 p-6 text-slate-200 shadow-lg shadow-black/30"
+              className="relative flex h-full flex-col gap-4 rounded-3xl border border-surface-light-muted/70 bg-white/80 p-6 text-slate-600 shadow-lg shadow-black/10 transition-colors dark:border-white/10 dark:bg-slate-900/50 dark:text-slate-200 dark:shadow-black/30"
             >
               <Quote className="text-accent" size={24} aria-hidden />
               <p className="text-base leading-relaxed text-slate-300">{testimonial.content}</p>
