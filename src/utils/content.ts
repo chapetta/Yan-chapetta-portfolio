@@ -20,9 +20,9 @@ export const navItems: NavItem[] = [
 
 export const heroMetrics: Metric[] = [
   {
-    label: "Projetos publicados",
-    value: "39",
-    caption: "Repositórios públicos no GitHub",
+    label: "Atividade no GitHub",
+    value: "+39 repositórios",
+    caption: "Entre projetos pessoais e estudos contínuos",
   },
   {
     label: "Base",
