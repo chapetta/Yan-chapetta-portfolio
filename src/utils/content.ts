@@ -76,10 +76,19 @@ export const heroStack: StackItem[] = [
 ];
 
 export const aboutParagraphs = [
-  "Sou desenvolvedor Front-End no Rio de Janeiro focado em React, TypeScript e Tailwind CSS, criando produtos com performance e microinterações caprichadas. Busco atuação imediata em squads que valorizem design system e experiência de usuário.",
-  "Estudo Desenvolvimento Web Full Stack na plataforma Dev em Dobro e tenho formação em Marketing pela Estácio. Também concluí a formação em Desenvolvimento Web FullStack da Trybe e a Imersão Dev do Futuri (DevQuest), trazendo repertório de frontend, backend e produto.",
-  "No back-end atuo com Node.js, Express e PostgreSQL via Prisma, unindo validação, documentação (Swagger) e arquitetura limpa. Meus projetos pessoais como ChapsWallet e ChapettaStore reforçam domínio de formulários tipados, estado global e integrações com APIs.",
-  "Trabalho com metodologias ágeis (Scrum/Kanban), organizo entregas em sprints e mantenho rotina diária de estudo, evolução contínua e colaboração transparente com designers e stakeholders.",
+  "Sou desenvolvedor Front-End do Rio de Janeiro, especializado em React, TypeScript e Tailwind CSS. Tenho como foco criar interfaces funcionais, fluidas e com microinterações que elevam a experiência do usuário, sempre com atenção à performance e à clareza do código.",
+
+  "Atuo com uma abordagem centrada em produto e experiência: entendo a importância de entregar valor real para o usuário final e de manter um código bem estruturado para facilitar a escalabilidade. Em todos os meus projetos, busco aplicar boas práticas como componentização, tipagem estática, arquitetura limpa e integração contínua.",
+
+  "Me formei em Desenvolvimento Web Full Stack pela Trybe e aprofundei meus conhecimentos com bootcamps e imersões como o DevQuest. Essa formação me permitiu transitar com segurança entre front-end, back-end e lógica de produto. Também tenho background em Marketing, o que reforça minha visão voltada à comunicação clara e ao entendimento de negócio.",
+
+  "Durante a formação e em projetos autorais, participei ativamente de squads ágeis (Scrum/Kanban), utilizando ferramentas como Jira, Notion e GitHub Projects para planejamento, acompanhamento de tarefas e colaboração contínua.",
+
+  "Entre os projetos desenvolvidos, destaco:\n- ChapaWallet – uma carteira digital com autenticação segura, integração com APIs e foco em responsividade mobile-first.\n- ChapettaStore – um e-commerce funcional com listagem de produtos integrados à FakeStore API, filtros por categoria, página de detalhes do produto, checkout completo e finalização de compra. Desenvolvido com Context API, Tailwind CSS e UI moderna usando Shadcn.",
+
+  "Este portfólio foi inteiramente desenvolvido com o auxílio da IA Codex, desde a estrutura inicial até ajustes de layout e refatoração de código. Utilizei a IA de forma estratégica para acelerar decisões técnicas e garantir consistência visual, o que reflete minha disposição em adotar ferramentas modernas no meu fluxo de trabalho.",
+
+  "Atualmente, estou aprofundando meus conhecimentos em React avançado e estudando Inteligência Artificial aplicada ao desenvolvimento web, com foco em acompanhar as tendências do mercado e incorporar soluções modernas aos meus projetos.",
 ];
 
 export const softSkills: SoftSkill[] = [
