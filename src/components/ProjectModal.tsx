@@ -22,6 +22,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     [project.gallery, project.imageUrl]
   )
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [zoomImageOpen, setZoomImageOpen] = useState(false)
   const isChapettaStore = project.slug === 'chapetta-store'
   const badges = useMemo(
     () => Array.from(new Set([project.category, project.role, project.status].filter(Boolean))),
@@ -45,7 +46,15 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   useEffect(() => {
     setCurrentSlide(0)
+    setZoomImageOpen(false)
   }, [project.slug])
+
+  useEffect(() => {
+    document.body.style.overflow = zoomImageOpen ? 'hidden' : 'auto'
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [zoomImageOpen])
 
   const goToSlide = (direction: 'prev' | 'next') => {
     setCurrentSlide((prev) => {
@@ -65,12 +74,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   }
 
   const handleZoom = () => {
-    const currentUrl = mediaGallery[currentSlide]
-    const resolvedUrl =
-      currentUrl.startsWith('http://') || currentUrl.startsWith('https://')
-        ? currentUrl
-        : `${window.location.origin}${currentUrl.startsWith('/') ? '' : '/'}${currentUrl}`
-    window.open(resolvedUrl, '_blank', 'noopener,noreferrer')
+    setZoomImageOpen(true)
   }
 
   const renderBadgeRow = () =>
@@ -423,6 +427,35 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           {isChapettaStore ? renderChapettaLayout() : renderDefaultLayout()}
         </div>
       </div>
+      {zoomImageOpen && (
+        <div
+          className="fixed inset-0 z-[120] flex items-center justify-center bg-black/80 px-4 py-10 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Visualização ampliada do projeto ${project.title}`}
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              setZoomImageOpen(false)
+            }
+          }}
+        >
+          <button
+            type="button"
+            onClick={() => setZoomImageOpen(false)}
+            className="absolute right-8 top-8 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            aria-label="Fechar imagem em tela cheia"
+          >
+            <X size={18} />
+          </button>
+          <img
+            src={mediaGallery[currentSlide]}
+            alt={`Imagem ampliada do projeto ${project.title}`}
+            className="max-h-[90vh] max-w-[90vw] rounded-3xl object-contain"
+            onClick={(event) => event.stopPropagation()}
+            onError={handleImageError}
+          />
+        </div>
+      )}
       <button type="button" className="sr-only" onClick={onClose}>
         Fechar
       </button>
