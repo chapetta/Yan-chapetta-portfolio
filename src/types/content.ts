@@ -27,6 +27,12 @@ export type Project = {
   accent: string
   role: string
   category: 'Desafios' | 'Pessoais' | 'Profissionais'
+  status?: string
+  learned?: string[]
+  repoHighlights?: string[]
+  gallery?: string[]
+  desafios?: string[]
+  nextSteps?: string[]
 }
 
 export type Skill = {

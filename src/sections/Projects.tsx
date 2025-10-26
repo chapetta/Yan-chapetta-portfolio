@@ -14,8 +14,8 @@ export function Projects() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12">
         <SectionHeader
           eyebrow="projetos"
-          title="Produtos digitais que refletem meu processo de ponta a ponta"
-          description="Seleção de projetos open-source publicados por Yan Chapetta, categorizados entre desafios, iniciativas pessoais e práticas profissionais para demonstrar profundidade técnica."
+          title="Projetos práticos que traduzem meu aprendizado, evolução e visão de produto"
+          description="Seleção de aplicações e desafios desenvolvidos com foco em usabilidade, arquitetura moderna e aprendizado contínuo. Cada projeto reflete minha evolução prática como desenvolvedor front-end em formação."
         />
 
         <div className="grid grid-cols-12 gap-8">

@@ -119,7 +119,7 @@ export const projects: Project[] = [
     slug: "chapetta-store",
     title: "ChapettaStore",
     description:
-      "E-commerce em desenvolvimento com arquitetura baseada em design system, filtros dinâmicos e carrinho inteligente. Utiliza React, Tailwind, Context API, React Hook Form e Zod para formulários e validações tipadas.",
+      "Loja virtual criada com foco em arquitetura front-end moderna: utiliza design system autoral, filtros dinâmicos por categoria, contexto global e checkout validado com formulários tipados. O projeto reforça boas práticas em organização de código e evolução incremental.",
     technologies: [
       "React",
       "TypeScript",
@@ -134,12 +134,37 @@ export const projects: Project[] = [
     accent: "from-emerald-500/70 via-cyan-400/50 to-transparent",
     role: "Product Builder · Em evolução",
     category: "Pessoais",
+    status: "Roadmap ativo · Em evolução",
+    learned: [
+      "Design system com tokens tipados e componentes reutilizáveis",
+      "Filtros dinâmicos conectados ao Context API",
+      "Checkout com validações Zod + React Hook Form",
+    ],
+    repoHighlights: [
+      "Arquitetura por camadas (design-system, hooks e features)",
+      "Testes de tipagem para DTOs e carrinho",
+    ],
+    desafios: [
+      "Estratégia para sincronizar filtros, paginação e carrinho sem colisões",
+      "Construção de tokens de design versionados",
+    ],
+    nextSteps: [
+      "Integração com gateway de pagamento real",
+      "Implementar busca full-text e wish list",
+    ],
+    gallery: [
+      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/dashboard.png",
+      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/product.png",
+      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/cart.png",
+      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/catalog.png",
+      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/admin.png",
+    ],
   },
   {
     slug: "chapetta-wallet",
     title: "ChapsWallet",
     description:
-      "Dashboard financeiro com conversão em tempo real, autenticação e experiência responsiva. Integra Zustand, Zod e Tailwind para oferecer fluxo fluido e acessível.",
+      "Dashboard financeiro com autenticação, conversor de moedas em tempo real e governança de estado centralizada via Zustand para garantir previsibilidade.",
     technologies: [
       "React",
       "TypeScript",
@@ -155,12 +180,22 @@ export const projects: Project[] = [
     accent: "from-primary/80 via-primary/40 to-transparent",
     role: "Front-End & UX",
     category: "Pessoais",
+    status: "MVP publicado",
+    learned: [
+      "Estado global e sessão controlados com Zustand",
+      "Formulários tipados com React Hook Form + Zod",
+      "Design tokens unificados entre Tailwind e Shadcn/UI",
+    ],
+    repoHighlights: [
+      "Feature flags para recursos experimentais",
+      "Hooks de acessibilidade para navegação por teclado",
+    ],
   },
   {
     slug: "todo-app",
     title: "TodoApp",
     description:
-      "Aplicação de produtividade com tema dinâmico, filtros avançados e testes com RTL. Usa Context API, hooks customizados e animações suaves para criar foco.",
+      "Aplicativo de tarefas com tema dinâmico, filtros avançados e suíte de testes em RTL para validar acessibilidade e fluxo completo.",
     technologies: ["React", "TypeScript", "TailwindCSS", "Context API", "RTL"],
     repoUrl: "https://github.com/chapetta/todoList-app",
     liveUrl: "https://todoappchapetta.netlify.app/",
@@ -169,12 +204,22 @@ export const projects: Project[] = [
     accent: "from-accent/70 via-accent/40 to-transparent",
     role: "Front-End Lead",
     category: "Desafios",
+    status: "Versão estável",
+    learned: [
+      "Context API + hooks customizados para sincronizar estados",
+      "Testes com React Testing Library assegurando filtros e acessibilidade",
+      "Feedback visual com animações suaves em Tailwind",
+    ],
+    repoHighlights: [
+      "Pipelines de CI com coverage mínimo",
+      "Storybook simples para componentes de entrada",
+    ],
   },
   {
     slug: "code-beats",
     title: "Code Beats",
     description:
-      "Experiência musical interativa: pesquisa artistas, explora álbuns e reproduz prévias. Arquitetura em camadas com React Router, hooks customizados e design system próprio.",
+      "Experiência musical que integra múltiplas APIs para buscar artistas, listar álbuns e reproduzir prévias, consolidando arquitetura client-side modular com React Router.",
     technologies: [
       "React",
       "TypeScript",
@@ -188,12 +233,22 @@ export const projects: Project[] = [
     accent: "from-sky-500/70 via-purple-500/50 to-transparent",
     role: "Product Builder",
     category: "Pessoais",
+    status: "Concluído",
+    learned: [
+      "React Router para rotas aninhadas e data loaders",
+      "Hooks customizados controlando cache e erros",
+      "Design system autoral com animações responsivas",
+    ],
+    repoHighlights: [
+      "Mocks de API e estratégias de retry",
+      "Camada de serviços desacoplada do UI",
+    ],
   },
   {
     slug: "movieflix-api",
     title: "MovieFlix API",
     description:
-      "API RESTful documentada com Swagger para gerenciar catálogo de filmes. Desenvolvida com Node, Express e Prisma, priorizando modelagem limpa e boas práticas.",
+      "API REST para catálogo de filmes com modelagem relacional, documentação viva em Swagger e middlewares de autenticação escritos em TypeScript.",
     technologies: [
       "Node.js",
       "Express",
@@ -208,6 +263,16 @@ export const projects: Project[] = [
     accent: "from-stone-500/60 via-slate-700/40 to-transparent",
     role: "Back-End",
     category: "Profissionais",
+    status: "API privada",
+    learned: [
+      "Modelagem relacional com Prisma + PostgreSQL",
+      "Documentação interativa com Swagger e exemplos",
+      "Middlewares de autenticação e validações em TypeScript",
+    ],
+    repoHighlights: [
+      "Scripts de seed e reset do banco",
+      "Testes de integração com Supertest",
+    ],
   },
 ];
 
