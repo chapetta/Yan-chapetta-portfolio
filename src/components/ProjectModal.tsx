@@ -22,7 +22,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     [project.gallery, project.imageUrl]
   )
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
   const isChapettaStore = project.slug === 'chapetta-store'
   const badges = useMemo(
     () => Array.from(new Set([project.category, project.role, project.status].filter(Boolean))),
@@ -46,7 +45,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   useEffect(() => {
     setCurrentSlide(0)
-    setIsLightboxOpen(false)
   }, [project.slug])
 
   const goToSlide = (direction: 'prev' | 'next') => {
@@ -56,6 +54,23 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       }
       return prev === mediaGallery.length - 1 ? 0 : prev + 1
     })
+  }
+
+  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const fallback = project.imageUrl
+    if (event.currentTarget.src !== fallback) {
+      event.currentTarget.onerror = null
+      event.currentTarget.src = fallback
+    }
+  }
+
+  const handleZoom = () => {
+    const currentUrl = mediaGallery[currentSlide]
+    const resolvedUrl =
+      currentUrl.startsWith('http://') || currentUrl.startsWith('https://')
+        ? currentUrl
+        : `${window.location.origin}${currentUrl.startsWith('/') ? '' : '/'}${currentUrl}`
+    window.open(resolvedUrl, '_blank', 'noopener,noreferrer')
   }
 
   const renderBadgeRow = () =>
@@ -74,33 +89,34 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   const renderGallery = (variant: 'default' | 'full') => (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-surface-light-muted/70 bg-white/40 p-3 shadow-xl transition dark:border-white/10 dark:bg-white/5 ${
+      className={`relative rounded-2xl border border-surface-light-muted/70 bg-white/40 p-3 shadow-xl transition dark:border-white/10 dark:bg-white/5 ${
         variant === 'full' ? 'min-h-[260px]' : 'h-full'
       }`}
     >
-      <button
-        type="button"
-        onClick={() => setIsLightboxOpen(true)}
-        aria-label="Expandir imagem em tela cheia"
-        className="group block"
-      >
+      <div className="relative overflow-hidden rounded-xl">
         <img
           src={mediaGallery[currentSlide]}
           alt={`Imagem ilustrativa do projeto ${project.title}`}
-          className="aspect-video h-auto w-full max-h-[500px] rounded-xl object-cover transition group-hover:scale-[1.01]"
+          className="aspect-video h-auto w-full max-h-[500px] rounded-xl object-cover"
           loading="lazy"
+          onError={handleImageError}
         />
-        <span className="pointer-events-none absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-900/50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/90 backdrop-blur">
+        <button
+          type="button"
+          onClick={handleZoom}
+          className="absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/60 bg-slate-900/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white backdrop-blur transition hover:bg-white/80 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          aria-label="Abrir imagem atual em uma nova aba"
+        >
           <Maximize2 size={14} />
           Zoom
-        </span>
-      </button>
+        </button>
+      </div>
       {mediaGallery.length > 1 && (
         <>
           <button
             type="button"
             onClick={() => goToSlide('prev')}
-            className="absolute left-6 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-slate-900/60 text-white backdrop-blur transition hover:bg-white/80 hover:text-slate-900"
+            className="absolute left-6 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-slate-900/60 text-white backdrop-blur transition hover:bg-white/80 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             aria-label="Imagem anterior"
           >
             <ChevronLeft size={18} />
@@ -108,15 +124,15 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <button
             type="button"
             onClick={() => goToSlide('next')}
-            className="absolute right-6 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-slate-900/60 text-white backdrop-blur transition hover:bg-white/80 hover:text-slate-900"
+            className="absolute right-6 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-slate-900/60 text-white backdrop-blur transition hover:bg-white/80 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             aria-label="Próxima imagem"
           >
             <ChevronRight size={18} />
           </button>
           <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-            {mediaGallery.map((image, index) => (
+            {mediaGallery.map((_, index) => (
               <button
-                key={`${project.slug}-thumb-${image}-${index}`}
+                key={`${project.slug}-thumb-${index}`}
                 type="button"
                 onClick={() => setCurrentSlide(index)}
                 className={`h-2.5 w-2.5 rounded-full border border-white/70 transition ${
@@ -407,32 +423,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           {isChapettaStore ? renderChapettaLayout() : renderDefaultLayout()}
         </div>
       </div>
-      {isLightboxOpen && (
-        <div
-          className="fixed inset-0 z-[150] flex items-center justify-center bg-slate-900/90 px-4 py-10 backdrop-blur-md"
-          role="dialog"
-          aria-modal="true"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) {
-              setIsLightboxOpen(false)
-            }
-          }}
-        >
-          <button
-            type="button"
-            onClick={() => setIsLightboxOpen(false)}
-            className="absolute right-8 top-8 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            aria-label="Fechar visualização em tela cheia"
-          >
-            <X size={18} />
-          </button>
-          <img
-            src={mediaGallery[currentSlide]}
-            alt={`Imagem ampliada do projeto ${project.title}`}
-            className="max-h-[90vh] w-full max-w-5xl rounded-2xl object-contain shadow-2xl"
-          />
-        </div>
-      )}
       <button type="button" className="sr-only" onClick={onClose}>
         Fechar
       </button>

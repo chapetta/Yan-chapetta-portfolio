@@ -153,11 +153,10 @@ export const projects: Project[] = [
       "Implementar busca full-text e wish list",
     ],
     gallery: [
-      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/dashboard.png",
-      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/product.png",
-      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/cart.png",
-      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/catalog.png",
-      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/admin.png",
+      "/images/project/homepage.png",
+      "/images/project/product-detail.png",
+      "/images/project/cart.png",
+      "/images/project/checkout.png",
     ],
   },
   {
