@@ -189,6 +189,17 @@ export const projects: Project[] = [
       "Feature flags para recursos experimentais",
       "Hooks de acessibilidade para navegação por teclado",
     ],
+    desafios: [
+      "Persistência do estado da carteira usando zustand/persist sem duplicar pedidos de câmbio",
+      "Sincronização do formulário de despesas com a tabela e o total convertido em BRL",
+      "Fluxo de autenticação e rotas protegidas com feedback em tempo real",
+    ],
+    nextSteps: [
+      "Adicionar gráficos e dashboards de insights por categoria",
+      "Exportar despesas em CSV e integração com planilhas",
+      "Suporte multilíngue e múltiplas moedas base",
+    ],
+    gallery: ["/images/project/chapswallet-dashboard.gif"],
   },
   {
     slug: "todo-app",
@@ -210,9 +221,21 @@ export const projects: Project[] = [
       "Feedback visual com animações suaves em Tailwind",
     ],
     repoHighlights: [
-      "Pipelines de CI com coverage mínimo",
-      "Storybook simples para componentes de entrada",
+      "Hook useTodo centralizando todas as operações CRUD",
+      "Tema global controlado via Context API com tokens CSS",
+      "Testes unitários e de interação com React Testing Library",
     ],
+    desafios: [
+      "Persistir tarefas no localStorage mantendo filtros ativos e consistentes",
+      "Cobrir componentes críticos (form, lista e header) com testes automatizados",
+      "Manter o tema dark/light sincronizado com o estado global e CSS custom properties",
+    ],
+    nextSteps: [
+      "Sincronizar tarefas com uma API externa e autenticação por usuário",
+      "Adicionar drag and drop para reordenar tarefas",
+      "Gerar relatórios semanais e lembretes automáticos",
+    ],
+    gallery: ["/images/project/todoapp-web.gif", "/images/project/todoapp-mobile.gif"],
   },
   {
     slug: "code-beats",
@@ -239,9 +262,21 @@ export const projects: Project[] = [
       "Design system autoral com animações responsivas",
     ],
     repoHighlights: [
-      "Mocks de API e estratégias de retry",
-      "Camada de serviços desacoplada do UI",
+      "MusicContext gerenciando player, favoritos e loading",
+      "Serviços desacoplados para buscas, perfis e playlists",
+      "Testes de interação com React Testing Library nos fluxos críticos",
     ],
+    desafios: [
+      "Sincronizar player, favoritos e visualização de álbuns usando Context API",
+      "Cachear resultados de busca para reduzir requisições",
+      "Garantir responsividade e animações suaves entre rotas",
+    ],
+    nextSteps: [
+      "Aplicar o design system em Tailwind com tokens definitivos",
+      "Integrar com a API oficial do Spotify para prévias completas",
+      "Adicionar modo offline com IndexedDB e sincronização posterior",
+    ],
+    gallery: ["/images/project/codebeats-preview.svg"],
   },
   {
     slug: "movieflix-api",
@@ -272,6 +307,17 @@ export const projects: Project[] = [
       "Scripts de seed e reset do banco",
       "Testes de integração com Supertest",
     ],
+    desafios: [
+      "Orquestrar camadas de serviço e repositório com Prisma mantendo tipagem forte",
+      "Garantir idempotência e validação dos endpoints com middlewares dedicados",
+      "Manter documentação Swagger alinhada com as mudanças de schema",
+    ],
+    nextSteps: [
+      "Adicionar autenticação JWT com perfis de acesso (admin e leitor)",
+      "Implementar paginação, ordenação e filtros combinados",
+      "Publicar deploy containerizado e pipelines de observabilidade",
+    ],
+    gallery: ["/images/project/movieflix-diagram.svg"],
   },
 ];
 
