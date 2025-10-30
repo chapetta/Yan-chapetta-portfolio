@@ -37,7 +37,7 @@ export type ProjectCardProps = {
 }
 
 export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps) {
-  const delay = 0.15 * index
+  const delay = 0.08 * index
 
   return (
     <motion.article
@@ -58,7 +58,7 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
           initial={{ clipPath: 'inset(0 0 100% 0 round 24px)' }}
           whileInView={{ clipPath: 'inset(0 0 0% 0 round 24px)' }}
           viewport={{ once: true }}
-          transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
           className="col-span-12 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 shadow-inner sm:col-span-5"
         >
           <img

@@ -11,7 +11,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative scroll-mt-24 overflow-hidden px-5 py-20 sm:scroll-mt-28 sm:px-8 sm:py-24 lg:px-16"
+      className="relative scroll-mt-24 overflow-hidden px-6 py-20 sm:scroll-mt-32 sm:px-8 sm:py-24 lg:scroll-mt-36 lg:px-16"
     >
       <div className="absolute inset-0 -z-10 bg-noise-texture opacity-40" aria-hidden />
       <div className="mx-auto w-full max-w-6xl space-y-12">

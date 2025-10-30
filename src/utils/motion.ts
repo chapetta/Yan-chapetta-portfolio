@@ -2,8 +2,8 @@ import type { Variants } from 'framer-motion'
 
 type Direction = 'up' | 'down' | 'left' | 'right'
 
-export const fadeIn = (direction: Direction = 'up', delay = 0, duration = 0.7): Variants => {
-  const distance = 60
+export const fadeIn = (direction: Direction = 'up', delay = 0, duration = 0.25): Variants => {
+  const distance = 28
 
   const offsets: Record<Direction, { x?: number; y?: number }> = {
     up: { y: distance },
@@ -25,8 +25,8 @@ export const fadeIn = (direction: Direction = 'up', delay = 0, duration = 0.7): 
       ...(axis === 'x' ? { x: 0 } : { y: 0 }),
       transition: {
         type: 'spring',
-        stiffness: 90,
-        damping: 18,
+        stiffness: 110,
+        damping: 22,
         delay,
         duration
       }
@@ -34,7 +34,7 @@ export const fadeIn = (direction: Direction = 'up', delay = 0, duration = 0.7): 
   }
 }
 
-export const staggerContainer = (stagger = 0.18, delayChildren = 0): Variants => ({
+export const staggerContainer = (stagger = 0.08, delayChildren = 0.02): Variants => ({
   initial: {},
   animate: {
     transition: {
@@ -49,6 +49,6 @@ export const scaleIn: Variants = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] }
+    transition: { duration: 0.28, ease: [0.4, 0, 0.2, 1] }
   }
 }

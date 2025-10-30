@@ -8,7 +8,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative scroll-mt-24 overflow-hidden px-5 py-20 sm:scroll-mt-28 sm:px-8 sm:py-24 lg:px-16"
+      className="relative scroll-mt-24 overflow-hidden px-6 py-20 sm:scroll-mt-32 sm:px-8 sm:py-24 lg:scroll-mt-36 lg:px-16"
     >
       <div className="absolute inset-0 -z-10 opacity-40 blur-3xl" aria-hidden />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-12">
@@ -19,14 +19,14 @@ export function About() {
         />
 
         <motion.div
-          variants={staggerContainer(0.18, 0.1)}
+          variants={staggerContainer()}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.35 }}
           className="mx-auto w-full max-w-4xl"
         >
           <motion.div
-            variants={fadeIn("up", 0.1)}
+            variants={fadeIn("up", 0.05)}
             className="space-y-6 text-base leading-relaxed text-slate-300 sm:text-lg"
           >
             {/* Conteúdo ocupa 100% da largura útil e mantém leitura fluida em todas as quebras */}

@@ -3,8 +3,8 @@ import { Contact } from './sections/Contact'
 import { Hero } from './sections/Hero'
 import { Projects } from './sections/Projects'
 import { Skills } from './sections/Skills'
-import { Testimonials } from './sections/Testimonials'
-import { Header } from './components/Header'
+import { Certificates } from './sections/Certificates'
+import { FloatingNav } from './components/FloatingNav'
 import { ScrollProgress } from './components/ScrollProgress'
 import { FloatingWhatsapp } from './components/FloatingWhatsapp'
 
@@ -12,14 +12,14 @@ function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-surface font-sans text-surface-foreground antialiased">
       <ScrollProgress />
-      <Header />
+      <FloatingNav />
       <FloatingWhatsapp />
-      <main className="relative pt-24 sm:pt-28 lg:pt-32">
+      <main className="relative pt-20 sm:pt-24 lg:pt-28">
         <Hero />
         <About />
         <Projects />
         <Skills />
-        <Testimonials />
+        <Certificates />
         <Contact />
       </main>
       <footer className="px-5 pb-10 text-sm text-slate-400 sm:px-8 lg:px-16">

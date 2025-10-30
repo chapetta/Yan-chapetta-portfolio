@@ -18,10 +18,10 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <motion.div
-      variants={fadeIn('up', 0.1)}
+      variants={fadeIn('up', 0.04)}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.25 }}
       className={clsx('max-w-3xl text-pretty', className)}
     >
       <p className="text-sm uppercase tracking-[0.4em] text-slate-400">

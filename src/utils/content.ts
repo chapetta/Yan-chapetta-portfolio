@@ -1,21 +1,12 @@
-import type {
-  HardSkill,
-  Metric,
-  NavItem,
-  Project,
-  Skill,
-  SoftSkill,
-  StackItem,
-  Testimonial,
-} from "../types/content";
+import type { Certificate, Metric, NavItem, Project, Skill, StackItem } from "../types/content";
 
 export const navItems: NavItem[] = [
-  { id: "hero", label: "Início" },
-  { id: "about", label: "Sobre" },
-  { id: "projects", label: "Projetos" },
-  { id: "skills", label: "Habilidades" },
-  { id: "feedbacks", label: "Feedbacks" },
-  { id: "contact", label: "Contato" },
+  { id: "hero", label: "Início", icon: "🏠" },
+  { id: "about", label: "Sobre", icon: "👤" },
+  { id: "projects", label: "Projetos", icon: "📁" },
+  { id: "stack", label: "Stack", icon: "⚙️" },
+  { id: "certificates", label: "Certificados", icon: "🎓" },
+  { id: "contact", label: "Contato", icon: "✉️" },
 ];
 
 export const heroMetrics: Metric[] = [
@@ -91,27 +82,13 @@ export const aboutParagraphs = [
   "Atualmente, estou aprofundando meus conhecimentos em React avançado e estudando Inteligência Artificial aplicada ao desenvolvimento web, com foco em acompanhar as tendências do mercado e incorporar soluções modernas aos meus projetos.",
 ];
 
-export const softSkills: SoftSkill[] = [
-  {
-    title: "Agilidade Estruturada",
-    description:
-      "Uso Scrum e Kanban para organizar backlog, cadenciar sprints e medir evolução.",
-  },
-  {
-    title: "Comunicação Empática",
-    description:
-      "Colaboração clara com designers, product managers e stakeholders.",
-  },
-  {
-    title: "Ownership",
-    description:
-      "Faço follow-up constante, documento decisões e puxo melhorias contínuas.",
-  },
-  {
-    title: "Aprendizado Contínuo",
-    description:
-      "Rotina diária de estudo com foco em automações, testes e performance.",
-  },
+export const softSkillChips: string[] = [
+  "Comunicação",
+  "Proatividade",
+  "Resolução de problemas",
+  "Trabalho em equipe",
+  "Pensamento crítico",
+  "Aprendizado contínuo",
 ];
 
 export const projects: Project[] = [
@@ -423,62 +400,52 @@ export const skills: Skill[] = [
 export const whatsappLink =
   "https://wa.me/5521981510300?text=Ol%C3%A1%20Yan%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!";
 
-export const hardSkills: HardSkill[] = [
-  {
-    name: "React",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    level: "Avançado",
-    description: "Componentização, hooks avançados, Context API e roteamento.",
-  },
-  {
-    name: "TypeScript",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    level: "Avançado",
-    description: "Tipagem forte, generics, padrões de arquitetura e linting.",
-  },
-  {
-    name: "Tailwind CSS",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    level: "Avançado",
-    description: "Design system utilitário e responsividade rápida.",
-  },
-  {
-    name: "Node.js",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    level: "Intermediário",
-    description: "APIs REST com Express, Prisma e PostgreSQL.",
-  },
-  {
-    name: "Prisma ORM",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-    level: "Intermediário",
-    description: "Modelagem de dados tipada, migrações e validações.",
-  },
-  {
-    name: "React Testing Library",
-    iconUrl: "https://testing-library.com/img/octopus-128x128.png",
-    level: "Intermediário",
-    description: "Testes focados em comportamento e acessibilidade.",
-  },
+export const focusCurrent: string[] = [
+  "React",
+  "Tailwind",
+  "TypeScript",
+  "Node.js",
+  "Banco de dados",
 ];
 
-export const testimonials: Testimonial[] = [
+export const focusFuture: string[] = ["Next.js", "IA", "Python", "Automação"];
+
+export const certificates: Certificate[] = [
   {
-    name: "Mentoria DevQuest",
-    role: "Instrutor – Depoimento Placeholder",
-    content:
-      "“Yan demonstra curiosidade constante, atenção aos detalhes e forte senso de ownership nas entregas. Sempre traz ideias para elevar a experiência do usuário.”",
+    title: "Formação Full Stack",
+    issuer: "Trybe",
+    imageUrl: "https://placehold.co/600x400?text=Certificado+Trybe",
+    url: "https://example.com/certificado-trybe",
   },
   {
-    name: "Comunidade Trybe",
-    role: "Parceria de estudos",
-    content:
-      "“Parceria super colaborativa nos squads remotos: Yan se destaca em organizar backlog e propor soluções em React com animações elegantes.”",
+    title: "React Avançado",
+    issuer: "DevQuest",
+    imageUrl: "https://placehold.co/600x400?text=React+Avancado",
+    url: "https://example.com/react-avancado",
+  },
+  {
+    title: "UX para Front-End",
+    issuer: "Alura",
+    imageUrl: "https://placehold.co/600x400?text=UX+Front",
+    url: "https://example.com/ux-front",
+  },
+  {
+    title: "Automação com JavaScript",
+    issuer: "Rocketseat",
+    imageUrl: "https://placehold.co/600x400?text=Automacao+JS",
+    url: "https://example.com/automacao-js",
+  },
+  {
+    title: "Boas Práticas com TypeScript",
+    issuer: "Origamid",
+    imageUrl: "https://placehold.co/600x400?text=TypeScript",
+    url: "https://example.com/typescript",
+  },
+  {
+    title: "Inteligência Artificial para Devs",
+    issuer: "Google",
+    imageUrl: "https://placehold.co/600x400?text=IA+para+Devs",
+    url: "https://example.com/ia-devs",
   },
 ];
 

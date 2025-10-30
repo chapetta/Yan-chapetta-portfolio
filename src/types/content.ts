@@ -1,6 +1,7 @@
 export type NavItem = {
   id: string
   label: string
+  icon?: string
 }
 
 export type Metric = {
@@ -60,4 +61,11 @@ export type Testimonial = {
   role: string
   content: string
   avatarUrl?: string
+}
+
+export type Certificate = {
+  title: string
+  issuer: string
+  imageUrl: string
+  url: string
 }

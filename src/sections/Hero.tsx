@@ -31,7 +31,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative flex min-h-screen scroll-mt-24 items-center overflow-hidden px-5 pb-20 pt-16 text-balance sm:scroll-mt-28 sm:px-8 md:pt-20 lg:px-16 lg:pt-24"
+      className="relative scroll-mt-24 overflow-hidden px-6 pb-16 pt-12 text-balance sm:scroll-mt-32 sm:px-8 sm:pt-16 lg:scroll-mt-36 lg:min-h-screen lg:px-16 lg:pb-24 lg:pt-20"
       aria-label="Introdução do portfólio de Yan Chapetta"
     >
       <motion.div
@@ -50,13 +50,13 @@ export function Hero() {
       </motion.div>
 
       <motion.div
-        variants={staggerContainer(0.25, 0.2)}
+        variants={staggerContainer(0.06, 0.04)}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.5 }}
-        className="mx-auto grid w-full max-w-6xl grid-cols-12 gap-10 lg:gap-16"
+        className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-12 lg:items-center lg:gap-16"
       >
-        <div className="col-span-12 space-y-8 lg:col-span-7">
+        <div className="order-2 flex flex-col gap-8 lg:order-1 lg:col-span-7">
           <motion.span
             variants={fadeIn("down", 0)}
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-300"
@@ -67,21 +67,21 @@ export function Hero() {
 
           <div className="space-y-6">
             <motion.h1
-              variants={fadeIn("up", 0.05)}
+              variants={fadeIn("up", 0.02)}
               className="font-display text-[clamp(2.45rem,5vw,3.8rem)] font-semibold leading-[1.12] text-white"
             >
               <span className="text-accent">Yan Chapetta</span>
             </motion.h1>
 
             <motion.p
-              variants={fadeIn("up", 0.09)}
+              variants={fadeIn("up", 0.04)}
               className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300 sm:text-base"
             >
               Desenvolvedor Front-End
             </motion.p>
 
             <motion.div
-              variants={fadeIn("up", 0.12)}
+              variants={fadeIn("up", 0.08)}
               className="flex flex-wrap items-center gap-3 text-base text-slate-200 sm:text-lg"
             >
               <Typewriter
@@ -97,7 +97,7 @@ export function Hero() {
             </motion.div>
 
             <motion.p
-              variants={fadeIn("up", 0.18)}
+              variants={fadeIn("up", 0.12)}
               className="max-w-2xl text-pretty text-base leading-relaxed text-slate-300 sm:text-lg"
             >
               Desenvolvedor Front-End em formação, aplicando projetos reais para
@@ -111,8 +111,8 @@ export function Hero() {
           </div>
 
           <motion.div
-            variants={fadeIn("up", 0.25)}
-            className="flex w-full flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-start"
+            variants={fadeIn("up", 0.16)}
+            className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-start"
           >
             <button
               type="button"
@@ -134,11 +134,11 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            variants={fadeIn("up", 0.32)}
+            variants={fadeIn("up", 0.2)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.3 }}
-            className="grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2"
+            className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2"
           >
             {heroMetrics.map((metric) => (
               <div
@@ -160,12 +160,12 @@ export function Hero() {
         </div>
 
         <motion.div
-          variants={fadeIn("left", 0.2)}
-          className="relative col-span-12 flex items-center justify-center lg:col-span-5"
+          variants={fadeIn("left", 0.08)}
+          className="order-1 flex w-full justify-center lg:order-2 lg:col-span-5"
         >
           <motion.div
             variants={scaleIn}
-            className="relative w-full max-w-[420px] rounded-[2.5rem] border border-white/10 bg-slate-900/60 p-8 text-left backdrop-blur-xl shadow-glow-primary"
+            className="relative w-full max-w-[360px] rounded-[2.5rem] border border-white/10 bg-slate-900/65 p-6 text-left backdrop-blur-xl shadow-glow-primary sm:max-w-md lg:max-w-[420px]"
           >
             <div className="absolute -top-14 right-0 h-36 w-36 rounded-full bg-primary/30 blur-3xl" />
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-2">
@@ -190,7 +190,7 @@ export function Hero() {
               Aplicações front-end modernas para projetos reais
             </p>
             <motion.div
-              variants={fadeIn("up", 0.2)}
+              variants={fadeIn("up", 0.1)}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true, amount: 0.3 }}
@@ -199,7 +199,7 @@ export function Hero() {
               {heroStack.map((stack, index) => (
                 <motion.div
                   key={stack.name}
-                  variants={fadeIn("up", index * 0.06)}
+                  variants={fadeIn("up", index * 0.04)}
                   className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
                 >
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-950/60">
@@ -208,7 +208,7 @@ export function Hero() {
                       alt={stack.name}
                       className="h-7 w-7"
                       loading="lazy"
-                  />
+                    />
                   </span>
                   <span className="text-xs uppercase tracking-widest text-slate-400">
                     {stack.name}

@@ -16,7 +16,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-24 overflow-hidden px-5 py-20 sm:scroll-mt-28 sm:px-8 sm:py-24 lg:px-16"
+      className="relative scroll-mt-24 overflow-hidden px-6 py-20 sm:scroll-mt-32 sm:px-8 sm:py-24 lg:scroll-mt-36 lg:px-16"
     >
       <div className="absolute inset-0 -z-10 bg-noise-texture opacity-40" aria-hidden />
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12">
@@ -27,7 +27,7 @@ export function Contact() {
         />
 
         <motion.div
-          variants={fadeIn("up", 0.1)}
+          variants={fadeIn("up", 0.06)}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.4 }}
