@@ -485,45 +485,43 @@ export const certificates: Certificate[] = [
   {
     title: "Formação em Desenvolvimento Web",
     issuer: "Trybe",
-    imageUrl:
-      "/public/images/certificates/formacao_Desenvolvimento_Web_trybe.png",
+    imageUrl: "/images/certificates/formacao_Desenvolvimento_Web_trybe.png",
     url: "https://www.credential.net/591d2007-ed00-4875-b1d5-bc04ef82a35a#acc.wIsXpOJh",
   },
   {
     title: "Fundamentos do Desenvolvimento Web",
     issuer: "Trybe",
-    imageUrl:
-      "/public/images/certificates/fundamentos_do_desenvolvimento_web.png",
+    imageUrl: "/images/certificates/fundamentos_do_desenvolvimento_web.png",
     url: "https://www.credential.net/f45f2310-d010-4200-88ac-0efc1146cbe2#acc.WceP9uYD",
   },
   {
     title: "Desenvolvimento Front-End",
     issuer: "Trybe",
-    imageUrl: "/public/images/certificates/desenvolvimento_front_end.png",
+    imageUrl: "/images/certificates/desenvolvimento_front_end.png",
     url: "https://www.credential.net/481a6285-ecb5-4844-8c57-a7d2c429ed5d#acc.f4g9rxPG",
   },
   {
     title: "Desenvolvimento Back-End",
     issuer: "Trybe",
-    imageUrl: "/public/images/certificates/desenvolvimento_back_end.png",
+    imageUrl: "/images/certificates/desenvolvimento_back_end.png",
     url: "https://www.credential.net/ccf79a87-3513-492b-b121-25097617fec2#acc.yY21BgxF",
   },
   {
     title: "Ciência da Computação",
     issuer: "Trybe",
-    imageUrl: "/public/images/certificates/ciencia_da_computacao.png",
+    imageUrl: "/images/certificates/ciencia_da_computacao.png",
     url: "https://www.credential.net/771c613e-9a21-4943-829b-2b777db38ca7#acc.ZaB8Gs5r",
   },
   {
     title: "SQL Impressionador",
     issuer: "Hashtag Treinamentos",
-    imageUrl: "/public/images/certificates/sql_impressionador.png",
+    imageUrl: "/images/certificates/sql_impressionador.png",
     url: "https://portalhashtag.com/certificado-hashtag/1723059282002x994071378982338600",
   },
   {
     title: "Fundamentos de Next.js",
     issuer: "Linkedin Learning",
-    imageUrl: "/public/images/certificates/fundamentos_nextjs.png",
+    imageUrl: "/images/certificates/fundamentos_nextjs.png",
     url: "https://www.linkedin.com/learning/certificates/dc9a5f23393364e7f8f874fc847461077995a8c7d08ae1cec8f2254ce53731ef",
   },
 ];
