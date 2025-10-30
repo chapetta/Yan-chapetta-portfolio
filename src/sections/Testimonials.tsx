@@ -6,8 +6,11 @@ import { fadeIn, staggerContainer } from '../utils/motion'
 
 export function Testimonials() {
   return (
-    <section id="feedbacks" className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-16">
-      <div className="absolute inset-0 -z-10 bg-noise-texture opacity-40" />
+    <section
+      id="feedbacks"
+      className="relative scroll-mt-24 overflow-hidden px-5 py-20 sm:scroll-mt-28 sm:px-8 sm:py-24 lg:px-16"
+    >
+      <div className="absolute inset-0 -z-10 bg-noise-texture opacity-35" aria-hidden />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-12">
         <SectionHeader
           eyebrow="feedbacks"
@@ -25,7 +28,7 @@ export function Testimonials() {
             <motion.blockquote
               key={`${testimonial.name}-${index}`}
               variants={fadeIn('up', index * 0.1)}
-              className="relative flex h-full flex-col gap-4 rounded-3xl border border-surface-light-muted/70 bg-white/80 p-6 text-slate-600 shadow-lg shadow-black/10 transition-colors dark:border-white/10 dark:bg-slate-900/50 dark:text-slate-200 dark:shadow-black/30"
+              className="relative flex h-full flex-col gap-4 rounded-3xl border border-white/10 bg-slate-900/60 p-6 text-slate-200 shadow-lg shadow-black/40"
             >
               <Quote className="text-accent" size={24} aria-hidden />
               <p className="text-base leading-relaxed text-slate-300">{testimonial.content}</p>

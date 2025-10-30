@@ -45,7 +45,7 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.35 }}
-      className="group relative overflow-hidden rounded-3xl border border-surface-light-muted/60 bg-white/70 shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition-transform duration-500 hover:-translate-y-2 dark:border-white/5 dark:bg-slate-900/40 dark:shadow-[0_18px_45px_rgba(5,5,5,0.45)]"
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-[0_18px_45px_rgba(8,15,40,0.45)] transition-transform duration-500 hover:-translate-y-2"
     >
       <div
         className={clsx(
@@ -53,13 +53,13 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
           project.accent
         )}
       />
-      <div className="relative grid grid-cols-12 gap-6 p-6 sm:p-8">
+      <div className="relative grid grid-cols-12 gap-6 p-5 sm:p-8">
         <motion.div
           initial={{ clipPath: 'inset(0 0 100% 0 round 24px)' }}
           whileInView={{ clipPath: 'inset(0 0 0% 0 round 24px)' }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
-          className="col-span-12 overflow-hidden rounded-2xl border border-surface-light-muted bg-slate-200/50 shadow-inner dark:border-white/10 dark:bg-slate-950/90 sm:col-span-5"
+          className="col-span-12 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 shadow-inner sm:col-span-5"
         >
           <img
             src={project.imageUrl}
@@ -70,26 +70,26 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
         </motion.div>
 
         <div className="relative z-10 col-span-12 flex flex-col gap-4 sm:col-span-7">
-          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-500 transition-colors dark:text-slate-400">
-            <span className="inline-flex items-center gap-2 rounded-full border border-surface-light-muted/80 bg-white/60 px-3 py-1 dark:border-white/10 dark:bg-white/5">
+          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-400">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
               <Sparkles size={16} className="text-primary" />
               {project.role}
             </span>
-            <span className="rounded-full border border-surface-light-muted/80 bg-white/60 px-3 py-1 font-semibold tracking-[0.3em] text-slate-600 transition-colors dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold tracking-[0.3em] text-slate-300">
               {project.category}
             </span>
           </div>
-          <h3 className="font-display text-[clamp(1.85rem,3vw,2.4rem)] font-semibold text-slate-900 transition-colors dark:text-white">
+          <h3 className="font-display text-[clamp(1.8rem,3vw,2.3rem)] font-semibold text-white">
             {project.title}
           </h3>
-          <p className="text-base leading-relaxed text-slate-600 transition-colors dark:text-slate-300">
+          <p className="text-base leading-relaxed text-slate-300 text-pretty">
             {project.description}
           </p>
-          <ul className="mt-1 flex flex-wrap gap-3">
+          <ul className="mt-1 flex flex-wrap gap-2.5">
             {project.technologies.map((tech) => (
               <li
                 key={tech}
-                className="group relative flex items-center gap-2 rounded-full border border-surface-light-muted/70 bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600 transition-colors dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
+                className="group relative flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-200"
               >
                 {techIconMap[tech] ? (
                   <img
@@ -109,7 +109,7 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
             <button
               type="button"
               onClick={() => onOpenDetails(project)}
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:bg-primary/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/25 px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 hover:bg-primary/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <Monitor size={18} aria-hidden />
               Detalhes
@@ -119,7 +119,7 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-gradient-to-r from-primary/30 to-accent/40 px-4 py-2 text-sm font-semibold text-surface-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:border-primary hover:shadow-glow-primary dark:text-white"
+                className="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-gradient-to-r from-primary/30 to-accent/40 px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 hover:border-primary hover:shadow-glow-primary"
                 aria-label={`Abrir versão ao vivo do projeto ${project.title}`}
               >
                 <Globe size={18} aria-hidden />
@@ -130,7 +130,7 @@ export function ProjectCard({ project, index, onOpenDetails }: ProjectCardProps)
               href={project.repoUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-surface-light-muted/70 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-700 transition-transform duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-white/10 dark:bg-white/5 dark:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-primary/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               aria-label={`Abrir repositório de ${project.title} no GitHub`}
             >
               <Github size={18} aria-hidden />

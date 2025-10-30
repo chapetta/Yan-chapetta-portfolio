@@ -4,17 +4,17 @@ import { Hero } from './sections/Hero'
 import { Projects } from './sections/Projects'
 import { Skills } from './sections/Skills'
 import { Testimonials } from './sections/Testimonials'
-import { FloatingNav } from './components/FloatingNav'
+import { Header } from './components/Header'
 import { ScrollProgress } from './components/ScrollProgress'
 import { FloatingWhatsapp } from './components/FloatingWhatsapp'
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-surface-light font-sans text-surface-light-foreground transition-colors duration-300 dark:bg-surface dark:text-surface-foreground">
+    <div className="relative min-h-screen overflow-x-hidden bg-surface font-sans text-surface-foreground antialiased">
       <ScrollProgress />
-      <FloatingNav />
+      <Header />
       <FloatingWhatsapp />
-      <main className="relative">
+      <main className="relative pt-24 sm:pt-28 lg:pt-32">
         <Hero />
         <About />
         <Projects />
@@ -22,12 +22,12 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
-      <footer className="px-6 pb-10 text-sm text-slate-600 transition-colors duration-300 sm:px-10 lg:px-16 dark:text-slate-400">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 border-t border-surface-light-muted pt-6 transition-colors dark:border-white/5 sm:flex-row sm:items-center">
-          <p>
+      <footer className="px-5 pb-10 text-sm text-slate-400 sm:px-8 lg:px-16">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center">
+          <p className="text-pretty">
             © {new Date().getFullYear()} Yan Chapetta. Projetado e desenvolvido com React, Tailwind CSS e Framer Motion.
           </p>
-          <p className="text-slate-400">Construído para destacar animações, performance e storytelling.</p>
+          <p className="text-slate-500">Construído para destacar animações, performance e storytelling.</p>
         </div>
       </footer>
     </div>

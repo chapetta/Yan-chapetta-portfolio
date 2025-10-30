@@ -9,8 +9,11 @@ const categories = Array.from(new Set(skills.map((skill) => skill.category)))
 
 export function Skills() {
   return (
-    <section id="skills" className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-16">
-      <div className="absolute inset-0 -z-10 opacity-60" />
+    <section
+      id="skills"
+      className="relative scroll-mt-24 overflow-hidden px-5 py-20 sm:scroll-mt-28 sm:px-8 sm:py-24 lg:px-16"
+    >
+      <div className="absolute inset-0 -z-10 bg-noise-texture opacity-35" aria-hidden />
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12">
         <SectionHeader
           eyebrow="habilidades técnicas"
@@ -38,17 +41,17 @@ export function Skills() {
             viewport={{ once: true, amount: 0.3 }}
             className="col-span-12 space-y-6 lg:col-span-4"
           >
-            <div className="rounded-3xl border border-surface-light-muted/70 bg-white/70 p-6 transition-colors dark:border-white/5 dark:bg-slate-900/40">
-              <div className="flex.items-center gap-3 text-sm uppercase tracking-[0.4em] text-slate-500 transition-colors dark:text-slate-400">
+            <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-6">
+              <div className="flex items-center gap-3 text-sm uppercase tracking-[0.4em] text-slate-400">
                 <Cpu size={20} className="text-primary" />
                 fluidez técnica
               </div>
-              <ul className="mt-5 space-y-3 text-sm text-slate-600 transition-colors dark:text-slate-300">
+              <ul className="mt-5 space-y-3 text-sm text-slate-300">
                 {categories.map((category) => (
                   <li key={category} className="flex items-start gap-3">
                     <span className="mt-1.5 h-2 w-2 rounded-full bg-primary" />
                     <span>
-                      <strong className="block font-semibold text-slate-800 transition-colors dark:text-white">
+                      <strong className="block font-semibold text-white">
                         {category}
                       </strong>
                       {skills
@@ -61,22 +64,22 @@ export function Skills() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-surface-light-muted/70 bg-white/70 p-6 transition-colors dark:border-white/5 dark:bg-slate-900/40">
-              <p className="text-sm uppercase tracking-[0.4em] text-slate-500 transition-colors dark:text-slate-400">
+            <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-6">
+              <p className="text-sm uppercase tracking-[0.4em] text-slate-400">
                 foco atual de estudo
               </p>
-              <ul className="mt-5 space-y-3 text-sm text-slate-600 transition-colors dark:text-slate-300">
+              <ul className="mt-5 space-y-3 text-sm text-slate-300">
                 {hardSkills.map((skill) => (
                   <li key={skill.name} className="flex items-start gap-3">
                     <span className="mt-1.5 h-2 w-2 rounded-full bg-accent" />
                     <span>
-                      <strong className="block font-semibold text-slate-800 transition-colors dark:text-white">
+                      <strong className="block font-semibold text-white">
                         {skill.name}
                       </strong>
-                      <span className="text-xs uppercase tracking-[0.35em] text-slate-500 transition-colors dark:text-slate-400">
+                      <span className="text-xs uppercase tracking-[0.35em] text-slate-400">
                         {skill.level}
                       </span>
-                      <span className="mt-1 block leading-snug text-slate-600 transition-colors dark:text-slate-300">
+                      <span className="mt-1 block leading-snug text-slate-300">
                         {skill.description}
                       </span>
                     </span>
@@ -103,16 +106,16 @@ export function Skills() {
             viewport={{ once: true, amount: 0.2 }}
             className="col-span-12 mt-6"
           >
-            <h3 className="text-sm uppercase tracking-[0.4em] text-slate-500 transition-colors dark:text-slate-400">
+            <h3 className="text-sm uppercase tracking-[0.4em] text-slate-400">
               soft skills
             </h3>
             <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {softSkills.map((skill) => (
                 <div
                   key={`soft-${skill.title}`}
-                  className="rounded-2xl border border-surface-light-muted/70 bg-white/70 p-4 text-sm text-slate-600 transition-transform duration-300 hover:-translate-y-1 transition-colors dark:border-white/10 dark:bg-slate-900/40 dark:text-slate-300"
+                  className="rounded-2xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-300 transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <p className="font-semibold text-slate-800 transition-colors dark:text-white">
+                  <p className="font-semibold text-white">
                     {skill.title}
                   </p>
                   <p className="mt-2 leading-snug">{skill.description}</p>

@@ -129,8 +129,7 @@ export const projects: Project[] = [
       "React Hook Form",
     ],
     repoUrl: "https://github.com/chapetta/chapetta-store",
-    imageUrl:
-      "https://raw.githubusercontent.com/chapetta/chapetta-store/main/public/images/chapetta-store-prev.gif",
+    imageUrl: "/images/project/homepage.png",
     accent: "from-emerald-500/70 via-cyan-400/50 to-transparent",
     role: "Product Builder · Em evolução",
     category: "Pessoais",
@@ -174,8 +173,7 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/chapetta/chapetta-wallet",
     liveUrl: "https://chaps-wallet.vercel.app/",
-    imageUrl:
-      "https://raw.githubusercontent.com/chapetta/chapetta-wallet/main/public/images/web_preview.gif",
+    imageUrl: "/images/project/chapswallet-dashboard.gif",
     accent: "from-primary/80 via-primary/40 to-transparent",
     role: "Front-End & UX",
     category: "Pessoais",
@@ -209,8 +207,7 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "TailwindCSS", "Context API", "RTL"],
     repoUrl: "https://github.com/chapetta/todoList-app",
     liveUrl: "https://todoappchapetta.netlify.app/",
-    imageUrl:
-      "https://raw.githubusercontent.com/chapetta/todoList-app/main/public/images/web_preview.gif",
+    imageUrl: "/images/project/todoapp-web.gif",
     accent: "from-accent/70 via-accent/40 to-transparent",
     role: "Front-End Lead",
     category: "Desafios",
@@ -250,8 +247,7 @@ export const projects: Project[] = [
       "API Integration",
     ],
     repoUrl: "https://github.com/chapetta/code-beats",
-    imageUrl:
-      "https://raw.githubusercontent.com/chapetta/code-beats/main/demo.gif",
+    imageUrl: "/images/project/codebeats-preview.svg",
     accent: "from-sky-500/70 via-purple-500/50 to-transparent",
     role: "Product Builder",
     category: "Pessoais",
@@ -292,8 +288,7 @@ export const projects: Project[] = [
       "TypeScript",
     ],
     repoUrl: "https://github.com/chapetta/movieflix-api",
-    imageUrl:
-      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "/images/project/movieflix-diagram.svg",
     accent: "from-stone-500/60 via-slate-700/40 to-transparent",
     role: "Back-End",
     category: "Profissionais",

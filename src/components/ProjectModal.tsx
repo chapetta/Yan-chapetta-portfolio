@@ -339,6 +339,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             src={mediaGallery[currentSlide]}
             alt={`Imagem ampliada do projeto ${project.title}`}
             className="max-h-[90vh] max-w-[90vw] rounded-3xl object-contain"
+            loading="lazy"
             onClick={(event) => event.stopPropagation()}
             onError={handleImageError}
           />

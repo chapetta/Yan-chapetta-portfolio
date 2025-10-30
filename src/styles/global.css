@@ -3,18 +3,8 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
-  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --bg-surface: #f8fafc;
-  --bg-surface-muted: #e2e8f0;
-  --bg-overlay: rgba(99, 102, 241, 0.08);
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --accent: #6366f1;
-}
-
-.dark {
   color-scheme: dark;
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --bg-surface: #0b1120;
   --bg-surface-muted: #131c31;
   --bg-overlay: rgba(99, 102, 241, 0.16);

@@ -9,18 +9,22 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <section id="projects" className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-16">
-      <div className="absolute inset-0 -z-10 opacity-70" />
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12">
+    <section
+      id="projects"
+      className="relative scroll-mt-24 overflow-hidden px-5 py-20 sm:scroll-mt-28 sm:px-8 sm:py-24 lg:px-16"
+    >
+      <div className="absolute inset-0 -z-10 bg-noise-texture opacity-40" aria-hidden />
+      <div className="mx-auto w-full max-w-6xl space-y-12">
         <SectionHeader
           eyebrow="projetos"
           title="Projetos práticos que traduzem meu aprendizado, evolução e visão de produto"
           description="Seleção de aplicações e desafios desenvolvidos com foco em usabilidade, arquitetura moderna e aprendizado contínuo. Cada projeto reflete minha evolução prática como desenvolvedor front-end em formação."
+          className="text-pretty"
         />
 
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:gap-10">
           {projects.map((project, index) => (
-            <div key={project.slug} className="col-span-12">
+            <div key={project.slug}>
               <ProjectCard
                 project={project}
                 index={index}

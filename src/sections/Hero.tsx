@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowDownRight,
   Download,
@@ -13,6 +13,7 @@ import profileImage from "../assets/yan-chapetta.jpeg";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
@@ -30,11 +31,11 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pb-24 pt-28 sm:px-10 lg:px-16"
+      className="relative flex min-h-screen scroll-mt-24 items-center overflow-hidden px-5 pb-20 pt-16 text-balance sm:scroll-mt-28 sm:px-8 md:pt-20 lg:px-16 lg:pt-24"
       aria-label="Introdução do portfólio de Yan Chapetta"
     >
       <motion.div
-        style={{ y: parallaxY }}
+        style={prefersReducedMotion ? undefined : { y: parallaxY }}
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
       >
@@ -58,7 +59,7 @@ export function Hero() {
         <div className="col-span-12 space-y-8 lg:col-span-7">
           <motion.span
             variants={fadeIn("down", 0)}
-            className="inline-flex items-center gap-2 rounded-full border border-surface-light-muted/60 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-600 transition-colors dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-300"
           >
             <Sparkles size={16} className="text-accent" />
             front-end focado em produto
@@ -67,21 +68,21 @@ export function Hero() {
           <div className="space-y-6">
             <motion.h1
               variants={fadeIn("up", 0.05)}
-              className="font-display text-[clamp(2.75rem,5vw,4rem)] font-semibold leading-[1.12] text-surface-light-foreground transition-colors dark:text-white"
+              className="font-display text-[clamp(2.45rem,5vw,3.8rem)] font-semibold leading-[1.12] text-white"
             >
               <span className="text-accent">Yan Chapetta</span>
             </motion.h1>
 
             <motion.p
               variants={fadeIn("up", 0.09)}
-              className="text-lg font-semibold uppercase tracking-[0.3em] text-slate-600 transition-colors dark:text-slate-300"
+              className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300 sm:text-base"
             >
               Desenvolvedor Front-End
             </motion.p>
 
             <motion.div
               variants={fadeIn("up", 0.12)}
-              className="flex flex-wrap items-center gap-3 text-base text-slate-600 transition-colors dark:text-slate-200 sm:text-lg"
+              className="flex flex-wrap items-center gap-3 text-base text-slate-200 sm:text-lg"
             >
               <Typewriter
                 phrases={[
@@ -97,7 +98,7 @@ export function Hero() {
 
             <motion.p
               variants={fadeIn("up", 0.18)}
-              className="max-w-2xl text-base leading-relaxed text-slate-600 transition-colors dark:text-slate-300 sm:text-lg"
+              className="max-w-2xl text-pretty text-base leading-relaxed text-slate-300 sm:text-lg"
             >
               Desenvolvedor Front-End em formação, aplicando projetos reais para
               aprimorar minha base técnica e criar interfaces performáticas.
@@ -111,12 +112,12 @@ export function Hero() {
 
           <motion.div
             variants={fadeIn("up", 0.25)}
-            className="flex w-full flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-start"
+            className="flex w-full flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-start"
           >
             <button
               type="button"
               onClick={scrollToProjects}
-              className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-primary/60 bg-gradient-to-r from-primary/40 via-primary/30 to-accent/40 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition-all duration-500 hover:shadow-glow-primary sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-primary/60 bg-gradient-to-r from-primary/40 via-primary/30 to-accent/40 px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white transition-all duration-500 hover:shadow-glow-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto"
             >
               Ver projetos
               <ArrowDownRight size={18} aria-hidden />
@@ -124,7 +125,7 @@ export function Hero() {
             <a
               href={resumeUrl}
               download
-              className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-surface-light-muted/70 bg-white/80 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-slate-700 transition-colors duration-300 hover:border-accent/60 hover:bg-accent/20 hover:text-surface-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-white/10 dark:bg-white/5 dark:text-white sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-300 hover:border-accent/60 hover:bg-accent/20 hover:text-surface-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
               aria-label="Baixar currículo em PDF"
             >
               <Download size={18} aria-hidden />
@@ -142,15 +143,15 @@ export function Hero() {
             {heroMetrics.map((metric) => (
               <div
                 key={metric.label}
-                className="rounded-2xl border border-surface-light-muted/60 bg-white/60 p-5 backdrop-blur-lg transition-colors dark:border-white/10 dark:bg-white/5"
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-lg"
               >
-                <p className="text-sm font-medium text-slate-500 transition-colors dark:text-slate-400">
+                <p className="text-sm font-medium text-slate-400">
                   {metric.label}
                 </p>
-                <p className="mt-1 text-3xl font-semibold text-slate-900 transition-colors dark:text-white">
+                <p className="mt-1 text-3xl font-semibold text-white">
                   {metric.value}
                 </p>
-                <p className="mt-1 text-sm text-slate-600 transition-colors dark:text-slate-300">
+                <p className="mt-1 text-sm text-slate-300">
                   {metric.caption}
                 </p>
               </div>
@@ -164,7 +165,7 @@ export function Hero() {
         >
           <motion.div
             variants={scaleIn}
-            className="relative w-full max-w-[420px] rounded-[2.5rem] border border-white/10 bg-slate-900/50 p-8 text-left backdrop-blur-xl shadow-glow-primary"
+            className="relative w-full max-w-[420px] rounded-[2.5rem] border border-white/10 bg-slate-900/60 p-8 text-left backdrop-blur-xl shadow-glow-primary"
           >
             <div className="absolute -top-14 right-0 h-36 w-36 rounded-full bg-primary/30 blur-3xl" />
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-2">
@@ -173,6 +174,7 @@ export function Hero() {
                   src={profileImage}
                   alt="Retrato profissional de Yan Chapetta"
                   className="h-full w-full object-cover object-top"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.4em] text-white">
@@ -181,10 +183,10 @@ export function Hero() {
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-sm uppercase tracking-[0.4em] text-slate-500 transition-colors dark:text-slate-400">
+            <p className="mt-6 text-sm uppercase tracking-[0.4em] text-slate-400">
               Principais stacks
             </p>
-            <p className="mt-3 text-2xl font-semibold text-slate-900 transition-colors dark:text-white">
+            <p className="mt-3 text-2xl font-semibold text-white">
               Aplicações front-end modernas para projetos reais
             </p>
             <motion.div
@@ -198,16 +200,17 @@ export function Hero() {
                 <motion.div
                   key={stack.name}
                   variants={fadeIn("up", index * 0.06)}
-                  className="flex flex-col items-center gap-2 rounded-2xl border border-surface-light-muted/70 bg-white/80 px-4 py-3 transition-colors dark:border-white/10 dark:bg-white/5"
+                  className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/40 transition-colors dark:bg-slate-950/60">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-950/60">
                     <img
                       src={stack.iconUrl}
                       alt={stack.name}
                       className="h-7 w-7"
-                    />
+                      loading="lazy"
+                  />
                   </span>
-                  <span className="text-xs uppercase tracking-widest text-slate-600 transition-colors dark:text-slate-400">
+                  <span className="text-xs uppercase tracking-widest text-slate-400">
                     {stack.name}
                   </span>
                 </motion.div>
