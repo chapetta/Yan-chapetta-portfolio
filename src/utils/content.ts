@@ -1,4 +1,11 @@
-import type { Certificate, Metric, NavItem, Project, Skill, StackItem } from "../types/content";
+import type {
+  Certificate,
+  Metric,
+  NavItem,
+  Project,
+  Skill,
+  StackItem,
+} from "../types/content";
 
 export const navItems: NavItem[] = [
   { id: "hero", label: "Início", icon: "home" },
@@ -210,7 +217,10 @@ export const projects: Project[] = [
       "Adicionar drag and drop para reordenar tarefas",
       "Gerar relatórios semanais e lembretes automáticos",
     ],
-    gallery: ["/images/project/todoapp-web.gif", "/images/project/todoapp-mobile.gif"],
+    gallery: [
+      "/images/project/todoapp-web.gif",
+      "/images/project/todoapp-mobile.gif",
+    ],
   },
   {
     slug: "code-beats",
@@ -298,12 +308,14 @@ export const skills: Skill[] = [
   {
     name: "HTML",
     category: "Frontend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
     name: "CSS",
     category: "Frontend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
     name: "JavaScript",
@@ -314,7 +326,8 @@ export const skills: Skill[] = [
   {
     name: "React",
     category: "Frontend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Tailwind CSS",
@@ -325,12 +338,14 @@ export const skills: Skill[] = [
   {
     name: "Shadcn",
     category: "Frontend",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/radixui.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/radixui.svg",
   },
   {
     name: "Vitest",
     category: "Frontend",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vitest.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vitest.svg",
   },
   {
     name: "React Testing Library",
@@ -340,52 +355,62 @@ export const skills: Skill[] = [
   {
     name: "Next.js",
     category: "Frontend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "Node.js",
     category: "Backend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express",
     category: "Backend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
   {
     name: "Python",
     category: "Backend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
     name: "Sequelize",
     category: "Backend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
   },
   {
     name: "Prisma ORM",
     category: "Backend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
   },
   {
     name: "Docker",
     category: "Backend",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
   {
     name: "API RESTful",
     category: "Backend",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
   },
   {
     name: "Integração de APIs",
     category: "Conceitos",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/graphql.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/graphql.svg",
   },
   {
     name: "RESTful APIs",
     category: "Conceitos",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/swagger.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/swagger.svg",
   },
   {
     name: "Testes de Integração (RTL)",
@@ -410,12 +435,14 @@ export const skills: Skill[] = [
   {
     name: "Scrum",
     category: "Conceitos",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/scrumalliance.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/scrumalliance.svg",
   },
   {
     name: "Kanban",
     category: "Conceitos",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/trello.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/trello.svg",
   },
   {
     name: "Metodologias Ágeis",
@@ -425,12 +452,14 @@ export const skills: Skill[] = [
   {
     name: "Inteligência Artificial",
     category: "Conceitos",
-    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg",
+    iconUrl:
+      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg",
   },
   {
     name: "Versionamento de Código",
     category: "Conceitos",
-    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
 ];
 
@@ -445,44 +474,57 @@ export const focusCurrent: string[] = [
   "Banco de dados",
 ];
 
-export const focusExploration: string[] = ["Next.js", "Inteligência Artificial", "Python", "Automação"];
+export const focusExploration: string[] = [
+  "Next.js",
+  "Inteligência Artificial",
+  "Python",
+  "Automação",
+];
 
 export const certificates: Certificate[] = [
   {
-    title: "Formação Full Stack",
+    title: "Formação em Desenvolvimento Web",
     issuer: "Trybe",
-    imageUrl: "https://placehold.co/600x400?text=Certificado+Trybe",
-    url: "https://example.com/certificado-trybe",
+    imageUrl:
+      "/public/images/certificates/formacao_Desenvolvimento_Web_trybe.png",
+    url: "https://www.credential.net/591d2007-ed00-4875-b1d5-bc04ef82a35a#acc.wIsXpOJh",
   },
   {
-    title: "React Avançado",
-    issuer: "DevQuest",
-    imageUrl: "https://placehold.co/600x400?text=React+Avancado",
-    url: "https://example.com/react-avancado",
+    title: "Fundamentos do Desenvolvimento Web",
+    issuer: "Trybe",
+    imageUrl:
+      "/public/images/certificates/fundamentos_do_desenvolvimento_web.png",
+    url: "https://www.credential.net/f45f2310-d010-4200-88ac-0efc1146cbe2#acc.WceP9uYD",
   },
   {
-    title: "UX para Front-End",
-    issuer: "Alura",
-    imageUrl: "https://placehold.co/600x400?text=UX+Front",
-    url: "https://example.com/ux-front",
+    title: "Desenvolvimento Front-End",
+    issuer: "Trybe",
+    imageUrl: "/public/images/certificates/desenvolvimento_front_end.png",
+    url: "https://www.credential.net/481a6285-ecb5-4844-8c57-a7d2c429ed5d#acc.f4g9rxPG",
   },
   {
-    title: "Automação com JavaScript",
-    issuer: "Rocketseat",
-    imageUrl: "https://placehold.co/600x400?text=Automacao+JS",
-    url: "https://example.com/automacao-js",
+    title: "Desenvolvimento Back-End",
+    issuer: "Trybe",
+    imageUrl: "/public/images/certificates/desenvolvimento_back_end.png",
+    url: "https://www.credential.net/ccf79a87-3513-492b-b121-25097617fec2#acc.yY21BgxF",
   },
   {
-    title: "Boas Práticas com TypeScript",
-    issuer: "Origamid",
-    imageUrl: "https://placehold.co/600x400?text=TypeScript",
-    url: "https://example.com/typescript",
+    title: "Ciência da Computação",
+    issuer: "Trybe",
+    imageUrl: "/public/images/certificates/ciencia_da_computacao.png",
+    url: "https://www.credential.net/771c613e-9a21-4943-829b-2b777db38ca7#acc.ZaB8Gs5r",
   },
   {
-    title: "Inteligência Artificial para Devs",
-    issuer: "Google",
-    imageUrl: "https://placehold.co/600x400?text=IA+para+Devs",
-    url: "https://example.com/ia-devs",
+    title: "SQL Impressionador",
+    issuer: "Hashtag Treinamentos",
+    imageUrl: "/public/images/certificates/sql_impressionador.png",
+    url: "https://portalhashtag.com/certificado-hashtag/1723059282002x994071378982338600",
+  },
+  {
+    title: "Fundamentos de Next.js",
+    issuer: "Linkedin Learning",
+    imageUrl: "/public/images/certificates/fundamentos_nextjs.png",
+    url: "https://www.linkedin.com/learning/certificates/dc9a5f23393364e7f8f874fc847461077995a8c7d08ae1cec8f2254ce53731ef",
   },
 ];
 
