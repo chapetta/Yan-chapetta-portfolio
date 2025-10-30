@@ -14,7 +14,7 @@ function App() {
       <ScrollProgress />
       <FloatingNav />
       <FloatingWhatsapp />
-      <main className="relative pt-20 pb-28 sm:pt-24 sm:pb-32 lg:pt-28 lg:pb-36">
+      <main className="relative pt-12 pb-28 sm:pt-24 sm:pb-32 lg:pt-28 lg:pb-36">
         <Hero />
         <About />
         <Projects />

@@ -115,6 +115,17 @@ export function FloatingNav() {
             })}
           </nav>
         </div>
+
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-5 py-3 md:hidden">
+          <button
+            type="button"
+            onClick={handleNavigate('hero')}
+            className="cursor-pointer text-sm font-semibold uppercase tracking-[0.38em] text-slate-200 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            aria-label="Voltar para o início"
+          >
+            Yan Chapetta
+          </button>
+        </div>
       </header>
 
       <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">

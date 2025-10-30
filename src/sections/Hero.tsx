@@ -53,7 +53,7 @@ export function Hero() {
         variants={staggerContainer(0.06, 0.04)}
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-12 lg:items-center lg:gap-16"
       >
         <div className="order-2 flex flex-col gap-8 lg:order-1 lg:col-span-7">
