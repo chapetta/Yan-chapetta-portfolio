@@ -38,29 +38,16 @@ export type Project = {
 
 export type Skill = {
   name: string
-  category: 'Frontend' | 'Backend' | 'DevOps' | 'Ferramentas'
-  iconUrl: string
+  category: 'Frontend' | 'Backend' | 'Conceitos'
+  iconUrl?: string
+  iconSymbol?: string
   highlight?: boolean
-  level: SkillLevel
+  level?: SkillLevel
 }
 
 export type SoftSkill = {
   title: string
   description: string
-}
-
-export type HardSkill = {
-  name: string
-  iconUrl: string
-  level: SkillLevel
-  description: string
-}
-
-export type Testimonial = {
-  name: string
-  role: string
-  content: string
-  avatarUrl?: string
 }
 
 export type Certificate = {

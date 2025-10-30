@@ -1,12 +1,12 @@
 import type { Certificate, Metric, NavItem, Project, Skill, StackItem } from "../types/content";
 
 export const navItems: NavItem[] = [
-  { id: "hero", label: "Início", icon: "🏠" },
-  { id: "about", label: "Sobre", icon: "👤" },
-  { id: "projects", label: "Projetos", icon: "📁" },
-  { id: "stack", label: "Stack", icon: "⚙️" },
-  { id: "certificates", label: "Certificados", icon: "🎓" },
-  { id: "contact", label: "Contato", icon: "✉️" },
+  { id: "hero", label: "Início", icon: "home" },
+  { id: "about", label: "Sobre", icon: "user" },
+  { id: "projects", label: "Projetos", icon: "projects" },
+  { id: "stacks", label: "Stacks", icon: "stacks" },
+  { id: "certificates", label: "Certificados", icon: "certificates" },
+  { id: "contact", label: "Contato", icon: "contact" },
 ];
 
 export const heroMetrics: Metric[] = [
@@ -82,13 +82,14 @@ export const aboutParagraphs = [
   "Atualmente, estou aprofundando meus conhecimentos em React avançado e estudando Inteligência Artificial aplicada ao desenvolvimento web, com foco em acompanhar as tendências do mercado e incorporar soluções modernas aos meus projetos.",
 ];
 
-export const softSkillChips: string[] = [
-  "Comunicação",
+export const softSkillHighlights: string[] = [
+  "Abertura a feedbacks",
+  "Adaptabilidade",
+  "Curiosidade técnica",
+  "Organização pessoal",
+  "Comunicação assíncrona",
   "Proatividade",
-  "Resolução de problemas",
-  "Trabalho em equipe",
   "Pensamento crítico",
-  "Aprendizado contínuo",
 ];
 
 export const projects: Project[] = [
@@ -295,105 +296,141 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   {
-    name: "React",
+    name: "HTML",
     category: "Frontend",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    highlight: true,
-    level: "Avançado",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
-    name: "TypeScript",
+    name: "CSS",
+    category: "Frontend",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "JavaScript",
     category: "Frontend",
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    highlight: true,
-    level: "Avançado",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "React",
+    category: "Frontend",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Tailwind CSS",
     category: "Frontend",
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    level: "Avançado",
   },
   {
-    name: "Framer Motion",
+    name: "Shadcn",
     category: "Frontend",
-    iconUrl:
-      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/framermotion.svg",
-    level: "Intermediário",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/radixui.svg",
+  },
+  {
+    name: "Vitest",
+    category: "Frontend",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vitest.svg",
+  },
+  {
+    name: "React Testing Library",
+    category: "Frontend",
+    iconUrl: "https://testing-library.com/img/octopus-128x128.png",
+  },
+  {
+    name: "Next.js",
+    category: "Frontend",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "Node.js",
     category: "Backend",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    highlight: true,
-    level: "Intermediário",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express",
     category: "Backend",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    level: "Intermediário",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    name: "Python",
+    category: "Backend",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "Sequelize",
+    category: "Backend",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
   },
   {
     name: "Prisma ORM",
     category: "Backend",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-    level: "Intermediário",
-  },
-  {
-    name: "PostgreSQL",
-    category: "Backend",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    level: "Intermediário",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
   },
   {
     name: "Docker",
-    category: "DevOps",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    level: "Intermediário",
+    category: "Backend",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
   {
-    name: "GitHub Actions",
-    category: "DevOps",
-    iconUrl:
-      "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/githubactions.svg",
-    level: "Intermediário",
+    name: "API RESTful",
+    category: "Backend",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
   },
   {
-    name: "Git",
-    category: "Ferramentas",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    level: "Avançado",
+    name: "Integração de APIs",
+    category: "Conceitos",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/graphql.svg",
   },
   {
-    name: "Jest",
-    category: "Ferramentas",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
-    level: "Intermediário",
+    name: "RESTful APIs",
+    category: "Conceitos",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/swagger.svg",
   },
   {
-    name: "Figma",
-    category: "Ferramentas",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    level: "Intermediário",
+    name: "Testes de Integração (RTL)",
+    category: "Conceitos",
+    iconUrl: "https://testing-library.com/img/octopus-128x128.png",
   },
   {
-    name: "Vercel",
-    category: "Ferramentas",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
-    level: "Intermediário",
+    name: "Programação Orientada a Objetos",
+    category: "Conceitos",
+    iconSymbol: "λ",
+  },
+  {
+    name: "Estruturas de Dados",
+    category: "Conceitos",
+    iconSymbol: "Σ",
+  },
+  {
+    name: "Engenharia de Software",
+    category: "Conceitos",
+    iconSymbol: "⚙",
+  },
+  {
+    name: "Scrum",
+    category: "Conceitos",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/scrumalliance.svg",
+  },
+  {
+    name: "Kanban",
+    category: "Conceitos",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/trello.svg",
+  },
+  {
+    name: "Metodologias Ágeis",
+    category: "Conceitos",
+    iconSymbol: "↻",
+  },
+  {
+    name: "Inteligência Artificial",
+    category: "Conceitos",
+    iconUrl: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg",
+  },
+  {
+    name: "Versionamento de Código",
+    category: "Conceitos",
+    iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
 ];
 
@@ -408,7 +445,7 @@ export const focusCurrent: string[] = [
   "Banco de dados",
 ];
 
-export const focusFuture: string[] = ["Next.js", "IA", "Python", "Automação"];
+export const focusExploration: string[] = ["Next.js", "Inteligência Artificial", "Python", "Automação"];
 
 export const certificates: Certificate[] = [
   {
