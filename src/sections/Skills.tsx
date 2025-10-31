@@ -46,6 +46,7 @@ export function Skills() {
           eyebrow="stacks principais"
           title="Stacks principais que uso no dia a dia"
           description="Organizei a stack em frentes para facilitar a leitura: selecione uma categoria e veja rapidamente onde concentro experiência e estudos."
+          className="mx-auto w-full max-w-xl text-left md:mx-0 md:max-w-none"
         />
 
         <div className="grid grid-cols-12 gap-y-12 gap-x-8">
@@ -54,9 +55,9 @@ export function Skills() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.2 }}
-            className="col-span-12"
+            className="col-span-12 flex justify-center md:block"
           >
-            <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-xl shadow-black/30 sm:p-8">
+            <div className="w-full max-w-xl rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-xl shadow-black/30 sm:p-8 md:max-w-none">
               <div className="flex flex-wrap gap-3">
                 {tabs.map((tab) => {
                   const isActive = tab === activeTab
@@ -111,9 +112,9 @@ export function Skills() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.2 }}
-            className="col-span-12"
+            className="col-span-12 flex justify-center md:block"
           >
-            <div className="flex flex-col gap-6 lg:flex-row">
+            <div className="w-full max-w-xl flex flex-col gap-6 md:max-w-none lg:flex-row">
               <div className="flex h-full flex-1 flex-col rounded-3xl border border-white/10 bg-slate-900/60 p-6 sm:p-8">
                 <h3 className="text-sm uppercase tracking-[0.35em] text-slate-400">Foco atual</h3>
                 <p className="mt-2 text-base text-slate-300">
@@ -154,9 +155,9 @@ export function Skills() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.2 }}
-            className="col-span-12"
+            className="col-span-12 flex justify-center md:block"
           >
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-6 sm:p-8">
+            <div className="w-full max-w-xl rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-950/80 p-6 sm:p-8 md:max-w-none">
               <h3 className="text-sm uppercase tracking-[0.35em] text-slate-400">Soft skills</h3>
               <p className="mt-2 text-base text-slate-300">
                 Aspectos comportamentais que mantenho em evidência para colaborar bem com equipes multidisciplinares.

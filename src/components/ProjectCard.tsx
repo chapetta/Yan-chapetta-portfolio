@@ -14,7 +14,7 @@ const techIconMap: Record<string, string> = {
   Zod: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/zod.svg',
   'React Hook Form':
     'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/reacthookform.svg',
-  Zustand: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/zustand.svg',
+  Zustand: '/icons/zustand.svg',
   'Shadcn/UI': 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/radixui.svg',
   'React Router':
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
