@@ -526,4 +526,4 @@ export const certificates: Certificate[] = [
   },
 ];
 
-export const resumeUrl = "/Yan-chapetta-Full-Stack.pdf";
+export const resumeUrl = "/Yan-Chapetta-CV-Full-Stack.pdf";
