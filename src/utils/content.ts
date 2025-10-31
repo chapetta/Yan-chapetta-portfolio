@@ -36,7 +36,7 @@ export const heroMetrics: Metric[] = [
   {
     label: "Disponibilidade",
     value: "Imediata",
-    caption: "Disponível para vagas de Front-End e Full Stack.",
+    caption: "Disponível para vagas Front-End, Back-End e Full Stack.",
   },
 ];
 
@@ -74,7 +74,7 @@ export const heroStack: StackItem[] = [
 ];
 
 export const aboutParagraphs = [
-  "Sou desenvolvedor Front-End do Rio de Janeiro, especializado em React, TypeScript e Tailwind CSS. Tenho como foco criar interfaces funcionais, fluidas e com microinterações que elevam a experiência do usuário, sempre com atenção à performance e à clareza do código.",
+  "Sou desenvolvedor Full Stack do Rio de Janeiro, especializado em React, TypeScript, Tailwind CSS, Node.js e banco de dados. Tenho como foco criar interfaces funcionais, fluidas e com microinterações que elevam a experiência do usuário, sempre com atenção à performance e à clareza do código.",
 
   "Atuo com uma abordagem centrada em produto e experiência: entendo a importância de entregar valor real para o usuário final e de manter um código bem estruturado para facilitar a escalabilidade. Em todos os meus projetos, busco aplicar boas práticas como componentização, tipagem estática, arquitetura limpa e integração contínua.",
 
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     liveUrl: "https://chaps-wallet.vercel.app/",
     imageUrl: "/images/project/chapswallet-dashboard.gif",
     accent: "from-primary/80 via-primary/40 to-transparent",
-    role: "Front-End & UX",
+    role: "Full Stack & UX",
     category: "Pessoais",
     status: "MVP publicado",
     learned: [
@@ -194,7 +194,7 @@ export const projects: Project[] = [
     liveUrl: "https://todoappchapetta.netlify.app/",
     imageUrl: "/images/project/todoapp-web.gif",
     accent: "from-accent/70 via-accent/40 to-transparent",
-    role: "Front-End Lead",
+    role: "Full Stack Lead",
     category: "Desafios",
     status: "Versão estável",
     learned: [

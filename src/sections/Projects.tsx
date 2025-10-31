@@ -18,7 +18,7 @@ export function Projects() {
         <SectionHeader
           eyebrow="projetos"
           title="Projetos práticos que traduzem meu aprendizado, evolução e visão de produto"
-          description="Seleção de aplicações e desafios desenvolvidos com foco em usabilidade, arquitetura moderna e aprendizado contínuo. Cada projeto reflete minha evolução prática como desenvolvedor front-end em formação."
+          description="Seleção de aplicações e desafios desenvolvidos com foco em usabilidade, arquitetura moderna e aprendizado contínuo. Cada projeto reflete minha evolução prática como desenvolvedor full stack em formação."
           className="text-pretty"
         />
 

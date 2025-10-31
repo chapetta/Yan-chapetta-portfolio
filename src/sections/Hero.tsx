@@ -61,7 +61,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-slate-300"
           >
             <Sparkles size={16} className="text-accent" />
-            front-end focado em produto
+            full stack focado em produto
           </motion.span>
 
           <div className="space-y-6">
@@ -76,7 +76,7 @@ export function Hero() {
               variants={fadeIn("up", 0.04)}
               className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300 sm:text-base"
             >
-              Desenvolvedor Front-End
+              Desenvolvedor Full Stack
             </motion.p>
 
             <motion.div
@@ -99,7 +99,7 @@ export function Hero() {
               variants={fadeIn("up", 0.12)}
               className="max-w-2xl text-pretty text-base leading-relaxed text-slate-300 sm:text-lg"
             >
-              Desenvolvedor Front-End em formação, aplicando projetos reais para
+              Desenvolvedor Full Stack em formação, aplicando projetos reais para
               aprimorar minha base técnica e criar interfaces performáticas.
               Estudo diariamente para aprofundar meus conhecimentos em React e
               Node, buscando unir prática e teoria em aplicações modernas. Com a
@@ -186,7 +186,7 @@ export function Hero() {
               Principais stacks
             </p>
             <p className="mt-3 text-2xl font-semibold text-white">
-              Aplicações front-end modernas para projetos reais
+              Aplicações full stack modernas para projetos reais
             </p>
             <motion.div
               variants={fadeIn("up", 0.1)}
