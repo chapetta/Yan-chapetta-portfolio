@@ -15,7 +15,7 @@ export function About() {
     currentFocus = "",
   ] = aboutParagraphs;
 
-  const techMatch = "React, TypeScript e Tailwind CSS";
+  const techMatch = "React, TypeScript, Tailwind CSS";
   const [introPrefix = "", introSuffixRaw = ""] = intro.split(techMatch);
   const [introSuffixBeforeMicro = "", introSuffixAfterMicro = ""] =
     introSuffixRaw.split("microinterações");
@@ -72,7 +72,7 @@ export function About() {
                 <p className="text-pretty break-words">
                   {introPrefix}
                   <span className="font-medium">React</span>,{" "}
-                  <span className="font-medium">TypeScript</span> e{" "}
+                  <span className="font-medium">TypeScript</span>,{" "}
                   <span className="font-medium">Tailwind CSS</span>
                   {introSuffixBeforeMicro}
                   <span className="font-medium">microinterações</span>
