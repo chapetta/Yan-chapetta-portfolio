@@ -18,7 +18,6 @@ export function Hero() {
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  // Parallax effect keeps the background subtly moving on scroll without impacting content readability.
   const parallaxY = useTransform(scrollYProgress, [0, 1], [0, -140]);
 
   const scrollToProjects = () => {
